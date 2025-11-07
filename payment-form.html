@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Resume Review Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #dbeafe;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --card-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Header Styles */
+        .top-header {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .logo-circle img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Main Title */
+        .page-title {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .page-title h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            font-size: 1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Payment Section - Single Column */
+        .payment-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--light-gray);
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        .payment-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .payment-content {
+            padding: 30px;
+        }
+
+        /* QR Section */
+        .payment-qr-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .price-display {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 15px;
+            position: relative;
+            border: 2px dashed var(--primary);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1);
+        }
+
+        .price-display::before {
+            content: 'Special Offer';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3);
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 1.2rem;
+            margin-right: 8px;
+            color: var(--gray);
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #22c55e;
+            text-shadow: 0 2px 5px rgba(34, 197, 94, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-label i {
+            color: var(--primary);
+            width: 18px;
+            font-size: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .form-input.error {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* Consistent 2-column layout for all form rows */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        .qr-container {
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 2px solid var(--primary-light);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .qr-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+            z-index: 1;
+        }
+
+        .qr-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .qr-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .qr-instructions {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .upi-id {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 2px solid #bae6fd;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upi-id::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(37, 99, 235, 0.02) 100%);
+        }
+
+        .upi-id h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .upi-id p {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--dark);
+            background: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 2px dashed var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 10px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid var(--primary-light);
+        }
+
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            color: #065f46;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 2px solid #10b981;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .success-message i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #059669;
+        }
+
+        .payment-note {
+            text-align: center;
+            color: var(--gray);
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Animation for success message */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+                padding: 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .qr-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title h1 {
+                font-size: 1.4rem;
+            }
+            
+            .current-price {
+                font-size: 1.6rem;
+            }
+            
+            .payment-content {
+                padding: 20px;
+            }
+            
+            .qr-container {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .upi-id p {
+                font-size: 1.1rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <img src="Sts_logo.jpg" alt="Samudhra Tech Solutions Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Samudhra Tech Solutions</h1>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="index.html" class="btn btn-outline">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="resume.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-title">
+            <h1>Complete Your Payment</h1>
+            <p>Secure payment for your Resume Review Service</p>
+        </div>
+        
+        <div class="payment-container">
+            <div class="payment-content">
+                <!-- QR Code Section -->
+                <div class="payment-qr-section">
+                    <h3><i class="fas fa-qrcode"></i> Scan QR Code to Pay</h3>
+                    </div>
+  <div class="payment-qr-section">
+                    <div class="qr-container">
+                        <img src="sir_upi.jpg" alt="UPI QR Code">
+                    </div>
+
+                    <p class="qr-instructions">
+                        Scan the QR code with any <strong>UPI app</strong><br>
+                        (Google Pay, PhonePe, Paytm, etc.)
+                    </p>
+
+                    <div class="upi-id">
+                        <h3><i class="fas fa-wallet"></i> UPI ID</h3>
+                        <p> 7339470191@ptsbi</p>
+                    </div>
+
+                    <div class="payment-note">
+                        <i class="fas fa-info-circle"></i>
+                        After payment, fill the form below and submit your details
+                    </div>
+                </div>
+                
+                <!-- Form Section -->
+                <div class="payment-form-section">
+                    <div class="price-display">
+                        <span class="original-price">₹299</span>
+                        <span class="current-price">₹199</span>
+                    </div>
+                    
+                    <form id="paymentForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Configuration -->
+                        <input type="hidden" name="access_key" value="05014fae-31bf-4d17-a8c6-a650eeced6e1">
+                        <input type="hidden" name="subject" value="New Resume Review Payment - Samudhra Tech">
+                        <input type="hidden" name="from_name" value="Samudhra Tech Payment Form">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+                        <input type="hidden" name="redirect" value="false">
+
+                        <!-- First Row: Name + Phone -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">
+                                    <i class="fas fa-user"></i> Full Name
+                                </label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="phone">
+                                    <i class="fas fa-phone"></i> Phone Number
+                                </label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Second Row: Email + UPI ID -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="email">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                </label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@gmail.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="upi">
+                                    <i class="fas fa-wallet"></i> Your UPI ID
+                                </label>
+                                <input type="text" id="upi" name="upi" class="form-input" placeholder="kaka@upi" required>
+                                <div class="error-message" id="upiError">Please enter a valid UPI ID (e.g., name@upi)</div>
+                            </div>
+                        </div>
+
+                      
+
+                        <div class="loading" id="loading">
+                            <div class="loading-spinner"></div>
+                            Sending your details to our team...
+                        </div>
+
+                        <div class="success-message" id="successMessage">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Thank You!</h3>
+                                <p>Payment details submitted successfully. Redirecting you back...</p>
+                                <p><small>You will be redirected in <span id="countdown">3</span> seconds</small></p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Submit Payment Details
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple UPI Validation Function
+        function validateUPI(upiId) {
+            // Basic UPI pattern: anything@anything
+            const upiPattern = /^[a-zA-Z0-9.\-_]+@[a-zA-Z0-9.\-_]+$/;
+            return upiPattern.test(upiId);
+        }
+
+        // Real-time UPI validation
+        document.getElementById('upi').addEventListener('input', function(e) {
+            const upiInput = e.target;
+            const errorElement = document.getElementById('upiError');
+            const upiValue = upiInput.value.trim();
+            
+            if (upiValue === '') {
+                upiInput.classList.remove('error');
+                errorElement.style.display = 'none';
+                return;
+            }
+            
+            if (validateUPI(upiValue)) {
+                upiInput.classList.remove('error');
+                errorElement.style.display = 'none';
+            } else {
+                upiInput.classList.add('error');
+                errorElement.style.display = 'block';
+                errorElement.textContent = 'Please enter a valid UPI ID (e.g., kaka@upi)';
+            }
+        });
+
+        // Form submission handler
+        document.getElementById('paymentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            console.log('Form submitted!');
+            
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const loading = document.getElementById('loading');
+            const successMessage = document.getElementById('successMessage');
+            const upiInput = document.getElementById('upi');
+            const upiError = document.getElementById('upiError');
+
+            // Validate UPI before submission
+            const upiValue = upiInput.value.trim();
+            console.log('UPI Value:', upiValue);
+            
+            if (!validateUPI(upiValue)) {
+                console.log('UPI validation failed');
+                upiInput.classList.add('error');
+                upiError.style.display = 'block';
+                upiError.textContent = 'Please enter a valid UPI ID (e.g., kaka@upi)';
+                upiInput.focus();
+                return;
+            }
+
+            console.log('UPI validation passed');
+
+            // Show loading
+            submitBtn.disabled = true;
+            submitBtn.style.display = 'none';
+            loading.style.display = 'block';
+            successMessage.style.display = 'none';
+
+            try {
+                // Create FormData object
+                const formData = new FormData(form);
+                
+                // Add timestamp
+                formData.append('_timestamp', new Date().toISOString());
+                
+                console.log('Sending to Web3Forms...');
+
+                // Send to Web3Forms
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                    }
+                });
+
+                const result = await response.json();
+                console.log('Web3Forms response:', result);
+
+                if (result.success) {
+                    // Success - hide loading, show success message
+                    loading.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    console.log('Email sent successfully via Web3Forms!');
+                    
+                    // Start countdown for redirect
+                    let countdown = 3;
+                    const countdownElement = document.getElementById('countdown');
+                    
+                    const countdownInterval = setInterval(() => {
+                        countdown--;
+                        countdownElement.textContent = countdown;
+                        
+                        if (countdown <= 0) {
+                            clearInterval(countdownInterval);
+                            console.log('Redirecting to resume.html');
+                            window.location.href = 'resume.html';
+                        }
+                    }, 1000);
+
+                } else {
+                    // Error from Web3Forms
+                    throw new Error(result.message || 'Failed to send email');
+                }
+
+            } catch (error) {
+                // Error handling
+                console.error('Error:', error);
+                
+                loading.style.display = 'none';
+                submitBtn.disabled = false;
+                submitBtn.style.display = 'flex';
+                
+                alert('Error sending email: ' + error.message + '\n\nPlease try again or contact us directly.');
+            }
+        });
+
+        // Test the UPI validation
+        console.log('Testing UPI validation:');
+        console.log('kaka@upi -', validateUPI('kaka@upi'));
+        console.log('test@paytm -', validateUPI('test@paytm'));
+        console.log('invalid -', validateUPI('invalid'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 Technical Consultation - Samudhra Tech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        /* Top Header Styles */
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Modern Service Detail Page */
+        .service-detail-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray);
+            background: none;
+            border: none;
+        }
+
+        .close-btn:hover {
+            color: var(--dark);
+        }
+
+        .modal-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark);
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Hero Section - Modern Design */
+        .service-hero {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 24px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .service-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .service-hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature i {
+            font-size: 1.4rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-header .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Modern Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Modern Target Audience */
+        .target-audience {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .audience-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .audience-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .audience-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .audience-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Modern Timeline */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-time {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            min-width: 100px;
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            flex: 1;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Modern Technologies Grid */
+        .tech-showcase {
+            background: white;
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-category {
+            text-align: center;
+        }
+
+        .tech-category h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background: var(--light);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: var(--dark);
+            border: 1px solid #e2e8f0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Modern CTA Section */
+        .cta-section {
+            text-align: center;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 50px;
+            border-radius: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="rgba(255,255,255,0.1)" cx="200" cy="200" r="100"/><circle fill="rgba(255,255,255,0.05)" cx="800" cy="800" r="150"/></svg>');
+        }
+
+        .cta-card h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .cta-card > p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            position: relative;
+        }
+
+        .cta-features {
+            margin: 35px 0;
+            position: relative;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            justify-content: center;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .cta-feature i {
+            color: var(--secondary);
+        }
+
+        .price-section {
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .price-note {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: #d1fae5;
+            color: #065f46;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid #a7f3d0;
+        }
+
+        /* Email Contact Styles */
+        .email-contact {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .email-button {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .email-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-hero {
+                padding: 60px 20px;
+            }
+            
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-features {
+                gap: 20px;
+            }
+            
+            .feature {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid,
+            .target-audience,
+            .tech-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .audience-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .timeline-time {
+                align-self: flex-start;
+            }
+            
+            .cta-card {
+                padding: 40px 25px;
+            }
+            
+            .cta-card h2 {
+                font-size: 1.8rem;
+            }
+            
+            .modal-content {
+                padding: 30px 25px;
+            }
+
+            /* Responsive Header */
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            body {
+                padding-top: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-detail-page {
+                padding: 15px;
+            }
+            
+            .service-hero {
+                padding: 40px 20px;
+            }
+            
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .benefit-card,
+            .audience-card,
+            .timeline-content {
+                padding: 25px 20px;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .modal-content {
+                padding: 25px 20px;
+            }
+
+            .top-header {
+                padding: 10px 0;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+            
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            body {
+                padding-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <img src="Sts_logo.jpg" alt="Samudhra Tech Solutions Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Samudhra Tech Solutions</h1>
+                        <p>Technical Career Services</p>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="index.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of your HTML content remains the same -->
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2 class="modal-title">Book Your FREE Session</h2>
+            <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Configuration -->
+                <input type="hidden" name="access_key" value="05014fae-31bf-4d17-a8c6-a650eeced6e1">
+                <input type="hidden" name="subject" value="New 1:1 Technical Consultation Booking">
+                
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="form-group">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Your Goals (Optional)</label>
+                    <textarea id="message" name="message" class="form-input" placeholder="Briefly describe your career goals or challenges" rows="3"></textarea>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    Sending your details...
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Thank you! Our team will contact you within 24 hours to schedule your FREE session.</span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Submit & Book Session
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="service-detail-page">
+        <!-- Hero Section -->
+        <div class="service-hero">
+            <h1>1:1 Technical Consultation</h1>
+            <p class="subtitle">Personalized Career Guidance from Industry Experts</p>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>30 Minutes Session</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-video"></i>
+                    <span>Video Call</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-rupee-sign"></i>
+                    <span>
+                        <span style="text-decoration: line-through; opacity: 0.7; margin-right: 5px;">₹199</span>
+                        <span style="color: #22c55e; font-weight: 700;">FREE</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>What You'll Get</h2>
+                <p class="section-subtitle">Comprehensive career guidance tailored to your unique goals and background</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Career Path Analysis</h3>
+                    <p>Get clarity on which technical career path aligns with your skills and interests</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Learning Roadmap</h3>
+                    <p>Personalized learning plan with technologies and skills you need to master</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Skill Gap Assessment</h3>
+                    <p>Identify missing skills and get recommendations to bridge the gaps</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Job Market Insights</h3>
+                    <p>Current industry trends and in-demand skills for better job opportunities</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Target Audience -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>Who Is This For?</h2>
+                <p class="section-subtitle">Whether you're starting out or leveling up, we've got you covered</p>
+            </div>
+            <div class="target-audience">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="audience-content">
+                        <h4>Students & Freshers</h4>
+                        <p>Computer science graduates looking to start their technical career</p>
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="audience-content">
+                        <h4>Career Switchers</h4>
+                        <p>Professionals from non-tech backgrounds transitioning to tech roles</p>
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="audience-content">
+                        <h4>Experienced Developers</h4>
+                        <p>Tech professionals seeking career advancement or specialization</p>
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="audience-content">
+                        <h4>Career Confused</h4>
+                        <p>Individuals unsure about which technology stack or domain to choose</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Session Agenda -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>Session Agenda</h2>
+                <p class="section-subtitle">Structured 30-minute session designed to maximize your career clarity</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">5 mins</div>
+                    <div class="timeline-content">
+                        <h4>Introduction & Background</h4>
+                        <p>Understanding your current skills, experience, and career goals</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15 mins</div>
+                    <div class="timeline-content">
+                        <h4>Deep Dive Analysis</h4>
+                        <p>Technical skill assessment and career path discussion</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">8 mins</div>
+                    <div class="timeline-content">
+                        <h4>Personalized Roadmap</h4>
+                        <p>Customized learning plan and next steps</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">2 mins</div>
+                    <div class="timeline-content">
+                        <h4>Q&A Session</h4>
+                        <p>Answering your specific questions and concerns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="content-section cta-section">
+            <div class="cta-card">
+                <h2>Ready to Transform Your Technical Career?</h2>
+                <p>Book your FREE 1:1 session with our industry experts and get personalized guidance</p>
+                
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>30-minute personalized session</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Career roadmap & skill assessment</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Industry insights & job market trends</span>
+                    </div>
+                </div>
+                
+                <div class="price-section">
+                    <div class="price">
+                        <span style="text-decoration: line-through; opacity: 0.7; font-size: 2.5rem; margin-right: 10px;">₹199</span>
+                        <span style="color: #22c55e; font-size: 3.5rem;">FREE</span>
+                    </div>
+                    <div class="price-note">Limited time offer • No hidden charges</div>
+                </div>
+                
+                <button class="cta-button" onclick="openModal()">
+                    <i class="fas fa-calendar-check"></i>
+                    Book FREE Session Now
+                </button>
+                
+            
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal() {
+            document.getElementById('bookingModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('bookingForm').reset();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Form submission with AJAX
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const loading = document.getElementById('loading');
+            const successMessage = document.getElementById('successMessage');
+
+            // Show loading
+            submitBtn.disabled = true;
+            loading.style.display = 'block';
+            successMessage.style.display = 'none';
+
+            try {
+                const formData = new FormData(form);
+                
+                // Add timestamp to avoid caching
+                formData.append('_timestamp', Date.now().toString());
+                
+                console.log('🔄 Sending to Web3Forms...');
+                console.log('Form data:', Object.fromEntries(formData.entries()));
+
+                // Send data via AJAX to Web3Forms
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                    }
+                });
+
+                const data = await response.json();
+                console.log('📨 Web3Forms Response:', data);
+                
+                // Hide loading
+                submitBtn.disabled = false;
+                loading.style.display = 'none';
+                
+                if (data.success) {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    successMessage.innerHTML = `
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Thank you! Form submitted successfully.</strong><br>
+                            <small>Our team will contact you within 24 hours.</small>
+                            ${data.message_id ? `<br><small>Submission ID: ${data.message_id}</small>` : ''}
+                        </div>
+                    `;
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Auto-close modal after 4 seconds
+                    setTimeout(() => {
+                        closeModal();
+                    }, 4000);
+                } else {
+                    let errorMessage = 'Failed to submit form. ';
+                    if (data.message) errorMessage += data.message;
+                    alert(errorMessage);
+                    console.error('❌ Web3Forms Error:', data);
+                }
+            } catch (error) {
+                // Hide loading
+                submitBtn.disabled = false;
+                loading.style.display = 'none';
+                
+                console.error('🚨 Network Error:', error);
+                alert('Network error: ' + error.message + '. Please check your connection and try again.');
+            }
+        });
+    </script>
+</body>
+</html>
