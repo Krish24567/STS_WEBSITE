@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services | Samudhra Tech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Custom Header Styles with Background Image */
+        .top-header {
+            background: linear-gradient(rgba(49, 68, 149, 0.95), rgba(49, 68, 149, 0.95)), 
+                        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 0.8rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .logo-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .logo-text p {
+            margin: 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item a, .contact-item span {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .contact-item i {
+            font-size: 0.9rem;
+            color: #a2ddf2;
+        }
+
+        .nav-buttons {
+            flex-shrink: 0;
+            margin-left: 2rem;
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            white-space: nowrap;
+            margin-right: 4rem;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline i {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-outline:hover i {
+            transform: translateX(-3px);
+        }
+
+        /* Rest of the CSS remains the same */
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #461e5b 0%, #3498db 100%);
+            color: white;
+            padding: 6rem 0 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 68px;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #2575fc;
+            background-color: #f8f9fa;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Square Tiles Styles */
+        .square-tiles-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .square-tile {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .square-tile:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .tile-img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .tile-content {
+            padding: 1.2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tile-content h3 {
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .tile-content p {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* Project Collage Styles */
+        .project-collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-collage-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+        }
+
+        .project-collage-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-collage-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+            aspect-ratio: 1 / 1;
+        }
+
+        .project-collage-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .project-collage-item:hover .project-overlay {
+            transform: translateY(0);
+        }
+
+        .project-overlay h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .project-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Full Screen Image Viewer */
+        .image-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .image-viewer.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .image-viewer-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .image-viewer-img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-viewer-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .image-viewer-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .image-viewer-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .image-viewer-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .image-viewer-prev {
+            left: 20px;
+        }
+
+        .image-viewer-next {
+            right: 20px;
+        }
+
+        .image-viewer-counter {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+        }
+
+        .tech-stack {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .tech-item:hover {
+            transform: scale(1.05);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            color: #2575fc;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #3498db;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .feature-card p {
+            color: #7f8c8d;
+        }
+
+        /* Stats Section */
+        .stats-section {
+           background: linear-gradient(135deg, #461e5b 0%, #3498db 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer p {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #444;
+            cursor: pointer;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1024px) {
+            .square-tiles-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .project-collage {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .project-collage-item.large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .contact-info {
+                margin: 0;
+                order: 2;
+            }
+            
+            .logo-section {
+                order: 1;
+            }
+            
+            .nav-buttons {
+                order: 3;
+                
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .square-tiles-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .project-collage {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .project-collage-item.large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            
+            .video-container iframe {
+                height: 300px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-contact {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            /* Mobile Navigation */
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+            }
+            
+            .nav-container.active {
+                display: flex;
+            }
+            
+            .nav-link {
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+            
+            /* Adjust section padding for mobile */
+            section {
+                padding: 2.5rem 0;
+            }
+            
+            .section-title {
+                margin-bottom: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+            
+            .feature-card {
+                padding: 1.5rem;
+            }
+            
+            .feature-icon {
+                font-size: 2.5rem;
+            }
+            
+            .tech-item {
+                padding: 1rem;
+            }
+            
+            .tech-icon {
+                font-size: 2rem;
+            }
+            
+            /* Full screen viewer adjustments for mobile */
+            .image-viewer-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .image-viewer-prev {
+                left: 10px;
+            }
+            
+            .image-viewer-next {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .square-tiles-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-collage {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-collage-item.large {
+                grid-column: span 1;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+   <div class="top-header">
+    <div class="header-content">
+        <!-- Logo in left corner -->
+        <div class="logo-section">
+            <div class="logo-circle">
+                <img src="sts_logo.jpg" alt="Samudhra Tech Solutions Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <div class="logo-text">
+                <h1>Samudhra Tech Solutions</h1>
+                <p>E-commerce Solutions</p>
+            </div>
+        </div>
+            <!-- Contact info and back button in right corner -->
+            <div style="display: flex; align-items: center; gap: 2rem;margin-left: auto;">
+                <!-- Contact info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+917339470191">+91 73394 70191</a>
+                    </div>
+                </div>
+                
+                <!-- Back to Home in right corner -->
+                <div class="nav-buttons">
+                    <a href="index.html" class="btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of the HTML remains the same -->
+    <nav>
+        <div class="container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-container" id="navContainer">
+                <a href="#services" class="nav-link">Our Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
+                <a href="#tools" class="nav-link">Technologies</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <h1>Web Development Services</h1>
+            <p class="subtitle">We build custom websites and web applications that drive business growth and deliver exceptional user experiences.</p>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Web Development Services</h2>
+                <!-- <p>We offer comprehensive web development solutions tailored to your business needs.</p> -->
+            </div>
+            
+            <div class="square-tiles-container">
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Custom Web Development" class="tile-img">
+                    <div class="tile-content">
+                        <h3>Custom Web Development</h3>
+                        <!-- <p>Bespoke websites tailored to your specific business requirements.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Web Application Development" class="tile-img">
+                    <div class="tile-content">
+                        <h3>Web Application Development</h3>
+                        <!-- <p>Robust web applications that streamline business processes.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Responsive Design" class="tile-img">
+                    <div class="tile-content">
+                        <h3>Responsive Web Design</h3>
+                        <!-- <p>Websites that look perfect on all devices and screen sizes.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="E-Commerce Solutions" class="tile-img">
+                    <div class="tile-content">
+                        <h3>E-Commerce Solutions</h3>
+                        <!-- <p>Complete online store development with payment integration.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="CMS Development" class="tile-img">
+                    <div class="tile-content">
+                        <h3>CMS Development</h3>
+                        <!-- <p>Custom content management systems for easy website updates.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="API Development" class="tile-img">
+                    <div class="tile-content">
+                        <h3>API Development</h3>
+                        <!-- <p>Custom APIs to connect your systems and enable integrations.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Website Maintenance" class="tile-img">
+                    <div class="tile-content">
+                        <h3>Website Maintenance</h3>
+                        <!-- <p>Ongoing support, updates, and security monitoring for your site.</p> -->
+                    </div>
+                </div>
+                
+                <div class="square-tile">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="SEO Optimization" class="tile-img">
+                    <div class="tile-content">
+                        <h3>SEO Optimization</h3>
+                        <!-- <p>Improve your website's visibility and ranking on search engines.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="projects" class="project-showcase">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Recent Projects</h2>
+                <p>Take a look at some of the successful web development projects we've delivered for our clients.</p>
+            </div>
+            
+            <div class="project-collage">
+                <div class="project-collage-item large">
+                    <img src="drs (2).png" alt="Corporate Website" class="project-collage-img">
+                    <div class="project-overlay">
+                        <h3>Boutique Website</h3>
+      <p>A stylish and elegant boutique website showcasing trendy fashion collections, product galleries, and online inquiries.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React.JS</span>
+                            <span class="project-tag">Node.JS</span>
+                          
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-collage-item">
+                    <img src="res.jpg" alt="Business Management System" class="project-collage-img">
+                    <div class="project-overlay">
+                                               <h3>Restaurant Website</h3>
+                        <p>Online ordering system with table reservation features.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Web Application</span>
+                              <span class="project-tag">Online Ordering</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-collage-item">
+                    <img src="con.png" alt="Restaurant Website" class="project-collage-img">
+                    <div class="project-overlay">
+<h3>Construction Web Application</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML,CSS,JS</span>
+                         
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-collage-item">
+                    <img src="hos.png" alt="E-commerce Platform" class="project-collage-img">
+                    <div class="project-overlay">
+                        <h3>Hospital Web Application</h3>
+                       
+
+                    </div>
+                </div>
+                
+                <div class="project-collage-item">
+                    <img src="organic.png" alt="Portfolio Website" class="project-collage-img">
+                    <div class="project-overlay">
+                      <h3>Organic Makeup Products</h3>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Screen Image Viewer -->
+    <div class="image-viewer" id="imageViewer">
+        <div class="image-viewer-content">
+            <img src="" alt="" class="image-viewer-img" id="viewerImage">
+            <button class="image-viewer-close" id="closeViewer">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="image-viewer-nav image-viewer-prev" id="prevImage">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="image-viewer-nav image-viewer-next" id="nextImage">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="image-viewer-counter" id="imageCounter"></div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Samudhra Tech Solutions?</h2>
+                <p>We deliver exceptional web development services tailored to your business needs with a focus on quality, performance, and customer satisfaction.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our experienced developers stay updated with the latest technologies and best practices to deliver cutting-edge solutions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We understand time is money. Our agile development process ensures quick turnaround without compromising quality.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Scalable</h3>
+                    <p>We build secure applications that can grow with your business, implementing best security practices and scalable architecture.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>All our websites are fully responsive, providing optimal viewing experience across all devices from desktop to mobile.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>We provide continuous support and maintenance services to ensure your website runs smoothly at all times.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Cost-Effective</h3>
+                    <p>We offer competitive pricing without compromising on quality, providing excellent value for your investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technologies We Work With</h2>
+                <p>We use modern technologies and frameworks to build robust and scalable web solutions.</p>
+            </div>
+            
+            <div class="tech-stack">
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">💻</div>
+                        <h4>Frontend</h4>
+                        <p>HTML5, CSS3, JavaScript, React</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔄</div>
+                        <h4>Backend</h4>
+                        <p>PHP, Node.js, Python, Laravel</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <h4>Databases</h4>
+                        <p>MySQL, MongoDB, PostgreSQL</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <h4>Hosting</h4>
+                        <p>AWS, cPanel, VPS, Shared Hosting</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📱</div>
+                        <h4>Frameworks</h4>
+                        <p>React, Bootstrap, jQuery</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔧</div>
+                        <h4>Tools</h4>
+                        <p>Git, VS Code, Photoshop, Figma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contactSection">
+        <div class="container">
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+917339470191">+91 73394 70191</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Thoothukudi, Tamilnadu</span>
+                </div>
+            </div>
+            <p>© 2025 Samudhra Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navContainer = document.getElementById('navContainer');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navContainer.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('nav') && navContainer.classList.contains('active')) {
+                navContainer.classList.remove('active');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu after clicking a link
+                    if (navContainer.classList.contains('active')) {
+                        navContainer.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Add active class to current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Full Screen Image Viewer Functionality
+        const imageViewer = document.getElementById('imageViewer');
+        const viewerImage = document.getElementById('viewerImage');
+        const closeViewer = document.getElementById('closeViewer');
+        const prevImage = document.getElementById('prevImage');
+        const nextImage = document.getElementById('nextImage');
+        const imageCounter = document.getElementById('imageCounter');
+        
+        // Get all project images
+        const projectImages = document.querySelectorAll('.project-collage-img');
+        let currentImageIndex = 0;
+        
+        // Function to open image viewer
+        function openImageViewer(index) {
+            currentImageIndex = index;
+            updateViewerImage();
+            imageViewer.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+        
+        // Function to update the viewer image
+        function updateViewerImage() {
+            const currentImage = projectImages[currentImageIndex];
+            viewerImage.src = currentImage.src;
+            viewerImage.alt = currentImage.alt;
+            imageCounter.textContent = `${currentImageIndex + 1} / ${projectImages.length}`;
+        }
+        
+        // Function to close image viewer
+        function closeImageViewer() {
+            imageViewer.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+        
+        // Function to show next image
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % projectImages.length;
+            updateViewerImage();
+        }
+        
+        // Function to show previous image
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + projectImages.length) % projectImages.length;
+            updateViewerImage();
+        }
+        
+        // Add click event to each project image
+        projectImages.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                openImageViewer(index);
+            });
+        });
+        
+        // Add event listeners for viewer controls
+        closeViewer.addEventListener('click', closeImageViewer);
+        nextImage.addEventListener('click', showNextImage);
+        prevImage.addEventListener('click', showPrevImage);
+        
+        // Close viewer when clicking outside the image
+        imageViewer.addEventListener('click', (e) => {
+            if (e.target === imageViewer) {
+                closeImageViewer();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!imageViewer.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeImageViewer();
+                    break;
+                case 'ArrowRight':
+                    showNextImage();
+                    break;
+                case 'ArrowLeft':
+                    showPrevImage();
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
