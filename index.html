@@ -316,6 +316,20 @@
     }
 }
 
+/* Mobile Services Dropdown */
+.mobile-services-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-services-dropdown.open {
+    max-height: 200px;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
 
     </style>
 </head>
@@ -384,19 +398,16 @@
             <a href="#about" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">About Us</a>
           <!-- In the Mobile Menu section -->
 <div class="relative">
-    <a href="#services" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800 flex justify-between items-center">
+    <a href="#services" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800 flex justify-between items-center services-mobile-trigger">
         Services
-        <i class="bi bi-chevron-down text-xs"></i>
+        <i class="bi bi-chevron-down text-xs transition-transform duration-300 services-arrow"></i>
     </a>
     
     <!-- Mobile Dropdown Menu -->
-    <div class="pl-6 hidden mobile-services-dropdown">
+    <div class="pl-6 mobile-services-dropdown bg-gray-50 dark:bg-[#2d3748] overflow-hidden">
          <a href="web.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Web Development</a>
         <a href="billing.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Billing Software</a>
-         <a href="web.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Web Application</a>
-        <!-- <a href="digital-marketing.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Digital Marketing</a>
-        <a href="technology-consulting.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Technology Consulting</a>
-        <a href="software-training.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Software Training</a> -->
+         <a href="ec.html" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">E -Commerce</a>
     </div>
 </div>
          <a href="#careers" class="block py-2 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-text-dark dark:hover:bg-gray-800">Careers</a>
@@ -650,89 +661,118 @@
 
 
    <!-- Contact Section -->
-<section id="contact" class="py-20 px-4 bg-primary text-white dark:bg-[#1f2937]">
+<!-- Contact Section -->
+<section id="contact" class="py-12 md:py-20 px-4 bg-primary text-white dark:bg-[#1f2937]">
     <div class="container mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 dark:text-primary" data-aos="fade-up">Ready to Start Your Project?</h2>
-        <p class="text-center text-lg text-tertiary max-w-2xl mx-auto mb-12 dark:text-secondary" data-aos="fade-up">
-            Let’s discuss your project and discover how Samudhra Tech Solutions can help you achieve your goals. Contact us for a free consultation.
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 dark:text-primary" data-aos="fade-up">Ready to Start Your Project?</h2>
+        <p class="text-center text-base md:text-lg text-tertiary max-w-2xl mx-auto mb-8 md:mb-12 dark:text-secondary" data-aos="fade-up">
+            Let's discuss your project and discover how Samudhra Tech Solutions can help you achieve your goals. Contact us for a free consultation.
         </p>
-        <div class="flex flex-wrap md:flex-nowrap items-start justify-center gap-12">
-            <div class="md:w-1/2 space-y-6" data-aos="fade-right" data-aos-duration="1000">
+        <div class="flex flex-col md:flex-row items-start justify-center gap-6 md:gap-12">
+            <!-- Contact Info - Mobile: Full width, Desktop: Half width -->
+            <div class="w-full md:w-1/2 space-y-4 md:space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                <!-- Address -->
                 <div class="space-y-2">
                     <div class="flex items-start">
-                        <i class="bi bi-geo-alt-fill text-secondary text-2xl mr-2"></i>
+                        <i class="bi bi-geo-alt-fill text-secondary text-xl md:text-2xl mr-3 mt-1"></i>
                         <div>
-                            <h3 class="text-xl font-semibold dark:text-[#E0E0E0]">Address</h3>
-                            <p class="text-tertiary dark:text-[#E0E0E0]">4/133X, Muthammal Colony, 3rd Street, Tuticorin-628002, Tamilnadu</p>
+                            <h3 class="text-lg md:text-xl font-semibold dark:text-[#E0E0E0]">Address</h3>
+                            <p class="text-sm md:text-base text-tertiary dark:text-[#E0E0E0]">4/133X, Muthammal Colony, 3rd Street, Tuticorin-628002, Tamilnadu</p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Phone -->
                 <div class="space-y-2">
                     <div class="flex items-start">
-                        <i class="bi bi-telephone-fill text-secondary text-2xl mr-2"></i>
+                        <i class="bi bi-telephone-fill text-secondary text-xl md:text-2xl mr-3 mt-1"></i>
                         <div>
-                            <h3 class="text-xl font-semibold dark:text-[#E0E0E0]">Call Us</h3>
-                            <a href="tel:+917339470191" class="text-tertiary hover:text-secondary transition-colors dark:text-[#E0E0E0] dark:hover:text-secondary">+91 73394 70191</a>
+                            <h3 class="text-lg md:text-xl font-semibold dark:text-[#E0E0E0]">Call Us</h3>
+                            <a href="tel:+917339470191" class="text-sm md:text-base text-tertiary hover:text-secondary transition-colors dark:text-[#E0E0E0] dark:hover:text-secondary">+91 73394 70191</a>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Email -->
                 <div class="space-y-2">
                     <div class="flex items-start">
-                        <i class="bi bi-envelope-fill text-secondary text-2xl mr-2"></i>
+                        <i class="bi bi-envelope-fill text-secondary text-xl md:text-2xl mr-3 mt-1"></i>
                         <div>
-                            <h3 class="text-xl font-semibold dark:text-[#E0E0E0]">Email Us</h3>
-                            <a href="mailto:samudhratechsolutions@gmail.com" class="text-tertiary hover:text-secondary transition-colors dark:text-[#E0E0E0] dark:hover:text-secondary">samudhratechsolutions@gmail.com</a>
+                            <h3 class="text-lg md:text-xl font-semibold dark:text-[#E0E0E0]">Email Us</h3>
+                            <a href="mailto:samudhratechsolutions@gmail.com" class="text-sm md:text-base text-tertiary hover:text-secondary transition-colors dark:text-[#E0E0E0] dark:hover:text-secondary">samudhratechsolutions@gmail.com</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Google Map Iframe -->
-                <div class="w-full mt-8">
-                    <h3 class="text-xl font-semibold dark:text-[#E0E0E0] mb-4">Our Location</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.6649456178893!2d78.12882997406477!3d8.817513092265525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef4c24b9d455%3A0xdd959181288d454b!2sSamudhra%20Tech%20Solutions!5e0!3m2!1sen!2sin!4v1756725729687!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Google Map - Mobile: Smaller, Desktop: Regular -->
+                <div class="w-full mt-6 md:mt-8">
+                    <h3 class="text-lg md:text-xl font-semibold dark:text-[#E0E0E0] mb-3 md:mb-4">Our Location</h3>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.6649456178893!2d78.12882997406477!3d8.817513092265525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef4c24b9d455%3A0xdd959181288d454b!2sSamudhra%20Tech%20Solutions!5e0!3m2!1sen!2sin!4v1756725729687!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-48 md:h-64">
+                        </iframe>
+                    </div>
                 </div>
             </div>
 
-            <div class="md:w-1/2 w-full bg-white p-8 rounded-lg shadow-lg dark:bg-[#2d3748]">
-                <!-- The form element you need to replace in your Contact Section -->
-                  <form id="contact-form" class="space-y-4">
-    <input type="hidden" name="access_key" value="05014fae-31bf-4d17-a8c6-a650eeced6e1">
-    <input type="hidden" name="from_name" value="Samuthra Tech Solutions">
-   <input type="hidden" id="subject" name="subject" value="Enquiry Form">
-    <div class="mb-4">
-        <label for="name" class="block text-gray-700 font-medium mb-1 dark:text-gray-100">Your Name</label>
-        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" required>
-    </div>
-    <div class="mb-4">
-        <label for="email" class="block text-gray-700 font-medium mb-1 dark:text-gray-100">Your Email</label>
-        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" required>
-    </div>
-    <div class="mb-4">
-        <label for="phone" class="block text-gray-700 font-medium mb-1 dark:text-gray-100">Phone Number</label>
-        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100">
-    </div>
-    <div class="mb-4">
-        <label for="message" class="block text-gray-700 font-medium mb-1 dark:text-gray-100">Message</label>
-        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" required></textarea>
-    </div>
-    <button type="submit" id="submit-button" class="w-full bg-secondary text-white py-3 px-6 rounded-md font-semibold hover:bg-primary transition-colors">
-        Send Message
-    </button>
-    <div id="status-message" class="mt-4 text-center font-semibold"></div>
-</form>
-
+            <!-- Contact Form - Mobile: Full width, Desktop: Half width -->
+            <div class="w-full md:w-1/2 bg-white p-4 md:p-8 rounded-lg shadow-lg dark:bg-[#2d3748]">
+                <form id="contact-form" class="space-y-3 md:space-y-4">
+                    <input type="hidden" name="access_key" value="05014fae-31bf-4d17-a8c6-a650eeced6e1">
+                    <input type="hidden" name="from_name" value="Samuthra Tech Solutions">
+                    <input type="hidden" id="subject" name="subject" value="Enquiry Form">
+                    
+                    <!-- Name Field -->
+                    <div class="mb-3 md:mb-4">
+                        <label for="name" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base dark:text-gray-100">Your Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="mb-3 md:mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base dark:text-gray-100">Your Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <!-- Phone Field -->
+                    <div class="mb-3 md:mb-4">
+                        <label for="phone" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base dark:text-gray-100">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <!-- Message Field -->
+                    <div class="mb-3 md:mb-4">
+                        <label for="message" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base dark:text-gray-100">Message</label>
+                        <textarea id="message" name="message" rows="3" class="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-100" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-button" class="w-full bg-secondary text-white py-2 md:py-3 px-4 md:px-6 rounded-md font-semibold text-sm md:text-base hover:bg-primary transition-colors flex items-center justify-center gap-2">
+                        <i class="bi bi-send-fill text-sm"></i>
+                        Send Message
+                    </button>
+                    
+                    <!-- Status Message -->
+                    <div id="status-message" class="mt-3 md:mt-4 text-center font-semibold text-sm md:text-base"></div>
+                </form>
             </div>
         </div>
     </div>
 </section>
-
     
 </main>
 
     <!-- Floating Buttons -->
 <div class="floating-buttons">
     <!-- WhatsApp -->
-    <a href="https://wa.me/917339470191" target="_blank" class="fab whatsapp animate-bounce" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918072263604" target="_blank" class="fab whatsapp animate-bounce" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span class="tooltip">Chat with us</span>
     </a>
@@ -806,7 +846,7 @@
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-primary mb-4 dark:text-primary">Our Journey: Built on a Foundation of Trust and Excellence.</h3>
                 <p class="mb-6 text-lg leading-relaxed text-gray-800 dark:text-[#E0E0E0]">
-                    Samudhra Tech Solutions was born from a simple yet powerful idea: to create a technology company that prioritizes the client experience above all else. In an industry often focused on transactions, we chose to focus on relationships. Our Board Directors, envisioned a firm where every project is a partnership, and every line of code is written with the client’s long-term success in mind. We've grown from a small team of passionate developers into a full-service software provider, but our core mission—to deliver exceptional value and unwavering customer satisfaction—remain the same.
+                    Samudhra Tech Solutions was born from a simple yet powerful idea: to create a technology company that prioritizes the client experience above all else. In an industry often focused on transactions, we chose to focus on relationships. Our Board Directors, envisioned a firm where every project is a partnership, and every line of code is written with the client's long-term success in mind. We've grown from a small team of passionate developers into a full-service software provider, but our core mission—to deliver exceptional value and unwavering customer satisfaction—remain the same.
                 </p>
             </div>
             
@@ -942,10 +982,49 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        // --- Mobile Services Dropdown Toggle ---
+        const servicesMobileTrigger = document.querySelector('.services-mobile-trigger');
+        const mobileServicesDropdown = document.querySelector('.mobile-services-dropdown');
+        const servicesArrow = document.querySelector('.services-arrow');
+
+        if (servicesMobileTrigger && mobileServicesDropdown) {
+            servicesMobileTrigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent the click from closing the mobile menu
+                
+                // Toggle dropdown visibility
+                mobileServicesDropdown.classList.toggle('open');
+                
+                // Rotate arrow icon
+                servicesArrow.classList.toggle('rotate-180');
             });
+        }
+
+        // Close mobile menu when clicking on other links (except services)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            // Don't add the close event to the services dropdown link
+            if (!link.classList.contains('services-mobile-trigger')) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    // Also close the services dropdown if it's open
+                    if (mobileServicesDropdown) {
+                        mobileServicesDropdown.classList.remove('open');
+                        servicesArrow.classList.remove('rotate-180');
+                    }
+                });
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                // Also close the services dropdown if it's open
+                if (mobileServicesDropdown) {
+                    mobileServicesDropdown.classList.remove('open');
+                    servicesArrow.classList.remove('rotate-180');
+                }
+            }
         });
 
         // --- Theme Toggle ---
@@ -1015,284 +1094,199 @@
                 }
             });
         });
-    </script>
-    <script>
-    // Form Submission Handling
-    const form = document.getElementById('contact-form');
-    const statusMessage = document.getElementById('status-message');
-    const submitButton = document.getElementById('submit-button');
-    const endpoint = 'https://api.web3forms.com/submit'; // Or your Formspree endpoint
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // Prevents the page from refreshing
-
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-        statusMessage.textContent = '';
-        statusMessage.classList.remove('text-green-500', 'text-red-500');
-
-        const data = new FormData(form);
-
-        try {
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                statusMessage.textContent = 'Message Sent Successfully!';
-                statusMessage.classList.add('text-green-500');
-                form.reset();
-            } else {
-                statusMessage.textContent = 'Failed to send message. Please try again.';
-                statusMessage.classList.add('text-red-500');
-                if (result.errors) {
-                    result.errors.forEach(error => {
-                        console.error(error.field, error.message);
-                    });
-                }
-            }
-        } catch (error) {
-            statusMessage.textContent = 'An error occurred. Please try again.';
-            statusMessage.classList.add('text-red-500');
-            console.error('Error:', error);
-        } finally {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
-        }
-    });
-
-
-</script>
-<script>
-// Career Modal and Formspree Handling
-    const careerButtons = document.querySelectorAll('.apply-now-btn');
-    const careerModal = document.getElementById('career-modal');
-    const careerCloseButton = document.getElementById('career-close-modal');
-    const careerForm = document.getElementById('career-form');
-    const modalTitle = document.getElementById('modal-title');
-    const careerSubject = document.getElementById('career-subject');
-    const dynamicQuestions = document.getElementById('dynamic-questions');
-    const careerStatusMessage = document.getElementById('career-status-message');
-    const careerSubmitButton = document.getElementById('career-submit');
-    const coverLetterInput = document.getElementById('career-message');
-    const wordCountDisplay = document.getElementById('word-count');
-
-    // Job-specific question blocks
-    const fullStackQuestions = document.getElementById('full-stack-questions');
-    const uiUxQuestions = document.getElementById('ui-ux-questions');
-    const digitalMarketingQuestions = document.getElementById('digital-marketing-questions');
-    const internshipQuestions = document.getElementById('internship-questions');
-
-    // Function to reset the form and word count
-const resetForm = () => {
-    careerForm.reset();
-    careerStatusMessage.textContent = '';
-    careerSubmitButton.disabled = false;
-    careerSubmitButton.textContent = 'Submit Application';
-    // Reset the word count display
-    wordCountDisplay.textContent = '0';
-};
-
-    // Open the modal and set content based on button clicked
-    careerButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const jobTitle = e.target.getAttribute('data-job-title');
-            // resetForm();
-            
-            // Set the modal's heading and hidden subject field
-            modalTitle.textContent = `Apply for ${jobTitle}`;
-            careerSubject.value = `${jobTitle} Application`;
-            
-            // Hide all dynamic question sections
-            fullStackQuestions.classList.add('hidden');
-            uiUxQuestions.classList.add('hidden');
-            digitalMarketingQuestions.classList.add('hidden');
-            internshipQuestions.classList.add('hidden');
-
-            // Show the correct dynamic question section based on job title
-            switch(jobTitle) {
-                case 'Full-Stack Developer':
-                    fullStackQuestions.classList.remove('hidden');
-                    break;
-                case 'UI/UX Designer':
-                    uiUxQuestions.classList.remove('hidden');
-                    break;
-                case 'Digital Marketing Specialist':
-                    digitalMarketingQuestions.classList.remove('hidden');
-                    break;
-                case 'Software Development Intern':
-                    internshipQuestions.classList.remove('hidden');
-                    break;
-            }
-
-            // Show the modal
-            careerModal.classList.remove('hidden');
-        });
-    });
-
-    // Close the modal when the close button or backdrop is clicked
-    careerCloseButton.addEventListener('click', () => {
-        careerModal.classList.add('hidden');
-        // Reset the form on close
-        careerForm.reset();
-        careerStatusMessage.textContent = '';
-        careerSubmitButton.disabled = false;
-        careerSubmitButton.textContent = 'Submit Application';
-         resetForm();
-    });
-    // Add an event listener to the document to listen for key presses
-document.addEventListener('keydown', (e) => {
-    // Check if the key pressed is the Escape key
-    if (e.key === 'Escape' || e.key === 'Esc') {
-        // Find the modal element
+        // Career Modal and Formspree Handling
+        const careerButtons = document.querySelectorAll('.apply-now-btn');
         const careerModal = document.getElementById('career-modal');
-        // If the modal is currently visible (not hidden), hide it
-        if (!careerModal.classList.contains('hidden')) {
-            careerModal.classList.add('hidden');
-            // Also reset the form and word count for a clean state
-            const careerForm = document.getElementById('career-form');
-            const wordCountDisplay = document.getElementById('word-count');
+        const careerCloseButton = document.getElementById('career-close-modal');
+        const careerForm = document.getElementById('career-form');
+        const modalTitle = document.getElementById('modal-title');
+        const careerSubject = document.getElementById('career-subject');
+        const dynamicQuestions = document.getElementById('dynamic-questions');
+        const careerStatusMessage = document.getElementById('career-status-message');
+        const careerSubmitButton = document.getElementById('career-submit');
+        const coverLetterInput = document.getElementById('career-message');
+        const wordCountDisplay = document.getElementById('word-count');
+
+        // Job-specific question blocks
+        const fullStackQuestions = document.getElementById('full-stack-questions');
+        const uiUxQuestions = document.getElementById('ui-ux-questions');
+        const digitalMarketingQuestions = document.getElementById('digital-marketing-questions');
+        const internshipQuestions = document.getElementById('internship-questions');
+
+        // Function to reset the form and word count
+        const resetForm = () => {
             careerForm.reset();
+            careerStatusMessage.textContent = '';
+            careerSubmitButton.disabled = false;
+            careerSubmitButton.textContent = 'Submit Application';
+            // Reset the word count display
             wordCountDisplay.textContent = '0';
-        }
-    }
-});
+        };
 
+        // Open the modal and set content based on button clicked
+        careerButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const jobTitle = e.target.getAttribute('data-job-title');
+                // resetForm();
+                
+                // Set the modal's heading and hidden subject field
+                modalTitle.textContent = `Apply for ${jobTitle}`;
+                careerSubject.value = `${jobTitle} Application`;
+                
+                // Hide all dynamic question sections
+                fullStackQuestions.classList.add('hidden');
+                uiUxQuestions.classList.add('hidden');
+                digitalMarketingQuestions.classList.add('hidden');
+                internshipQuestions.classList.add('hidden');
 
-    careerModal.addEventListener('click', (e) => {
-        if (e.target === careerModal) {
+                // Show the correct dynamic question section based on job title
+                switch(jobTitle) {
+                    case 'Full-Stack Developer':
+                        fullStackQuestions.classList.remove('hidden');
+                        break;
+                    case 'UI/UX Designer':
+                        uiUxQuestions.classList.remove('hidden');
+                        break;
+                    case 'Digital Marketing Specialist':
+                        digitalMarketingQuestions.classList.remove('hidden');
+                        break;
+                    case 'Software Development Intern':
+                        internshipQuestions.classList.remove('hidden');
+                        break;
+                }
+
+                // Show the modal
+                careerModal.classList.remove('hidden');
+            });
+        });
+
+        // Close the modal when the close button or backdrop is clicked
+        careerCloseButton.addEventListener('click', () => {
             careerModal.classList.add('hidden');
             // Reset the form on close
             careerForm.reset();
             careerStatusMessage.textContent = '';
             careerSubmitButton.disabled = false;
             careerSubmitButton.textContent = 'Submit Application';
-        }
-        // resetForm();
-    });
-
-    // Add word limit logic to the cover letter textarea
-    const maxWords = 120;
-    coverLetterInput.addEventListener('input', () => {
-        const text = coverLetterInput.value.trim();
-        const words = text === '' ? 0 : text.split(/\s+/).length;
-        
-        if (words > maxWords) {
-            const trimmedWords = text.split(/\s+/, maxWords).join(' ');
-            coverLetterInput.value = trimmedWords;
-        }
-        wordCountDisplay.textContent = words > maxWords ? maxWords : words;
-    });
-
-
-    // Handle the Web3Forms submission for the career form
-    careerForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        careerSubmitButton.disabled = true;
-        careerSubmitButton.textContent = 'Submitting...';
-        careerStatusMessage.textContent = '';
-        careerStatusMessage.classList.remove('text-green-500', 'text-red-500');
-
-        const endpoint = 'https://api.web3forms.com/submit';
-        const data = new FormData(careerForm);
-
-        try {
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                careerStatusMessage.textContent = 'Application Submitted Successfully!';
-                careerStatusMessage.classList.add('text-green-500');
-                careerForm.reset();
-                setTimeout(() => {
+             resetForm();
+        });
+        // Add an event listener to the document to listen for key presses
+        document.addEventListener('keydown', (e) => {
+            // Check if the key pressed is the Escape key
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                // Find the modal element
+                const careerModal = document.getElementById('career-modal');
+                // If the modal is currently visible (not hidden), hide it
+                if (!careerModal.classList.contains('hidden')) {
                     careerModal.classList.add('hidden');
-                }, 3000);
-            } else {
-                careerStatusMessage.textContent = 'Failed to submit application. Please try again.';
-                careerStatusMessage.classList.add('text-red-500');
-                if (result.errors) {
-                    result.errors.forEach(error => {
-                        console.error(error.field, error.message);
-                    });
+                    // Also reset the form and word count for a clean state
+                    const careerForm = document.getElementById('career-form');
+                    const wordCountDisplay = document.getElementById('word-count');
+                    careerForm.reset();
+                    wordCountDisplay.textContent = '0';
                 }
             }
-        } catch (error) {
-            careerStatusMessage.textContent = 'An error occurred. Please try again.';
-            careerStatusMessage.classList.add('text-red-500');
-            console.error('Error:', error);
-        } finally {
-            careerSubmitButton.disabled = false;
-            careerSubmitButton.textContent = 'Submit Application';
-        }
-    });
-
-
-   
-
-// --- Mobile Services Dropdown Toggle ---
-// --- Mobile Services Dropdown Toggle ---
-const servicesMobileLink = document.querySelector('#mobile-menu a[href="#services"]');
-const mobileServicesDropdown = document.querySelector('.mobile-services-dropdown');
-
-if (servicesMobileLink && mobileServicesDropdown) {
-    servicesMobileLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation(); // This prevents the click from bubbling up to the mobile menu
-        mobileServicesDropdown.classList.toggle('hidden');
-    });
-}
-// Update the mobile menu close event to exclude the services dropdown
-mobileMenu.querySelectorAll('a').forEach(link => {
-    // Don't add the close event to the services dropdown link
-    if (!link.closest('.mobile-services-dropdown') && link.getAttribute('href') !== '#services') {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
         });
-    }
-});
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
 
-// Show/hide scroll to top button based on scroll position
-window.addEventListener('scroll', function() {
-    const topButton = document.querySelector('.fab.top');
-    if (window.scrollY > 300) {
-        topButton.style.display = 'flex';
-    } else {
-        topButton.style.display = 'none';
-    }
-});
+        careerModal.addEventListener('click', (e) => {
+            if (e.target === careerModal) {
+                careerModal.classList.add('hidden');
+                // Reset the form on close
+                careerForm.reset();
+                careerStatusMessage.textContent = '';
+                careerSubmitButton.disabled = false;
+                careerSubmitButton.textContent = 'Submit Application';
+            }
+            // resetForm();
+        });
 
-// Initialize - hide top button on page load
-document.addEventListener('DOMContentLoaded', function() {
-    const topButton = document.querySelector('.fab.top');
-    topButton.style.display = 'none';
-});
+        // Add word limit logic to the cover letter textarea
+        const maxWords = 120;
+        coverLetterInput.addEventListener('input', () => {
+            const text = coverLetterInput.value.trim();
+            const words = text === '' ? 0 : text.split(/\s+/).length;
+            
+            if (words > maxWords) {
+                const trimmedWords = text.split(/\s+/, maxWords).join(' ');
+                coverLetterInput.value = trimmedWords;
+            }
+            wordCountDisplay.textContent = words > maxWords ? maxWords : words;
+        });
 
-</script>
 
-   
-    
+        // Handle the Web3Forms submission for the career form
+        careerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            careerSubmitButton.disabled = true;
+            careerSubmitButton.textContent = 'Submitting...';
+            careerStatusMessage.textContent = '';
+            careerStatusMessage.classList.remove('text-green-500', 'text-red-500');
+
+            const endpoint = 'https://api.web3forms.com/submit';
+            const data = new FormData(careerForm);
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    careerStatusMessage.textContent = 'Application Submitted Successfully!';
+                    careerStatusMessage.classList.add('text-green-500');
+                    careerForm.reset();
+                    setTimeout(() => {
+                        careerModal.classList.add('hidden');
+                    }, 3000);
+                } else {
+                    careerStatusMessage.textContent = 'Failed to submit application. Please try again.';
+                    careerStatusMessage.classList.add('text-red-500');
+                    if (result.errors) {
+                        result.errors.forEach(error => {
+                            console.error(error.field, error.message);
+                        });
+                    }
+                }
+            } catch (error) {
+                careerStatusMessage.textContent = 'An error occurred. Please try again.';
+                careerStatusMessage.classList.add('text-red-500');
+                console.error('Error:', error);
+            } finally {
+                careerSubmitButton.disabled = false;
+                careerSubmitButton.textContent = 'Submit Application';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide scroll to top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const topButton = document.querySelector('.fab.top');
+            if (window.scrollY > 300) {
+                topButton.style.display = 'flex';
+            } else {
+                topButton.style.display = 'none';
+            }
+        });
+
+        // Initialize - hide top button on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const topButton = document.querySelector('.fab.top');
+            topButton.style.display = 'none';
+        });
+
+    </script>
 </body>
 </html>
-
-
-
