@@ -140,6 +140,14 @@
             margin-bottom: 1rem;
             flex-wrap: wrap;
         }
+         .footer-contact .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-contact .social-links a {
+            font-size: 1.2rem;
+        }
         
         #contactSection p {
             margin: 0.5rem 0;
@@ -344,6 +352,16 @@
     margin: 0;
     color: var(--neutral-color);
 }
+ .footer-contact {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .footer-contact .social-links {
+                justify-content: center;
+            }
     </style>
 </head>
 <body class="bg-white text-gray-900 font-sans transition-colors duration-300">
@@ -757,22 +775,34 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contactSection">
+     <footer id="contactSection">
         <div class="container">
             <div class="footer-contact">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
                 </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0YdltgD%2FSdmBFo9XCdbhkA%3D%3D">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/samudhra_tuty?igsh=MWN0cW90dm8wMTBjMw==">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <a href="tel:+917339470191">+91 73394 70191</a>
                 </div>
+
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Thoothukudi, Tamilnadu</span>
                 </div>
             </div>
+
             <p>© 2025 Samudhra Tech Solutions. All rights reserved.</p>
         </div>
     </footer>
