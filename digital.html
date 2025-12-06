@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing | Samudhra Tech Solutions</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body, html { margin: 0; padding: 0; overflow-x: hidden; }
+
+        :root {
+            --primary-color: #314495;
+            --secondary-color: #16abe7;
+        }
+
+        /* HEADER */
+        .top-header {
+            background: linear-gradient(rgba(49, 68, 149, 0.95), rgba(22, 171, 231, 0.95)),
+                        url('digital-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            padding: 2px;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .contact-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 1.2rem; 
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .logo-text h1 { font-size: 1.2rem; }
+            .contact-info { justify-content: center; }
+            .contact-item a { font-size: 0.8rem; }
+            .nav-buttons a { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
+        }
+
+        .card { transition: transform .3s, box-shadow .3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+
+        .digital-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+        }
+
+        /* MASONRY */
+        .masonry { columns: 2; }
+        @media (max-width: 768px) { .masonry { columns: 2; } }
+
+        .masonry video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.2rem;
+        }
+
+        /* HERO FIX — avoid header overlap */
+        .hero-padding { padding-top: 140px; }
+        
+        @media (max-width: 550px) {
+            .hero-padding { padding-top: 170px; }
+            h1 { font-size: 2rem; }
+            p { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+<div class="h-5 bg-white">
+</div>
+    <!-- HEADER -->
+    <div class="top-header">
+        <div class="container px-4 mx-auto">
+            <div class="header-content">
+
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <img src="Sts_logo.jpg" alt="Samudhra Tech Solutions Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Samudhra Tech Solutions</h1>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:samudhratechsolutions@gmail.com">Email</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <a href="tel:+917339470191">Call</a>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="border border-white px-3 py-2 rounded-lg">
+                            <i class="bi bi-arrow-left"></i> Home
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-padding pb-24 text-center bg-gradient-to-r from-[#314495] to-[#16abe7] text-white px-4">
+        <h1 class="text-3xl sm:text-3xl md:text-4xl font-extrabold" data-aos="fade-up">Digital Marketing Services</h1>
+        <p class="text-md sm:text-lg opacity-90 max-w-2xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="200">
+            Grow your business with Meta Ads, SEO, Instagram Marketing & Lead Generation.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="#services" class="bg-white text-[#314495] px-8 py-3 rounded-full font-semibold hover:bg-gray-100">
+                Our Services
+            </a>
+            <a href="#pricing" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#314495]">
+                Pricing Plans
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">
+                What We Offer
+            </h2>
+            <p class="text-md sm:text-lg text-gray-600 text-center mb-16" data-aos="fade-up">
+                Professional digital marketing solutions for all business types
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+                    <i class="bi bi-bullseye digital-icon mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#314495] mb-2">Meta / Facebook Ads</h3>
+                    <p class="text-gray-600">Targeted ad campaigns to generate leads.</p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <i class="bi bi-instagram digital-icon mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#314495] mb-2">Instagram Growth</h3>
+                    <p class="text-gray-600">Organic growth, engagement & strategy.</p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="150">
+                    <i class="bi bi-search digital-icon mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#314495] mb-2">SEO Optimization</h3>
+                    <p class="text-gray-600">Rank higher on Google & get traffic.</p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-bar-chart-line digital-icon mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#314495] mb-2">Brand Marketing</h3>
+                    <p class="text-gray-600">Build strong digital brand identity.</p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="250">
+                    <i class="bi bi-people digital-icon mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#314495] mb-2">Lead Generation</h3>
+                    <p class="text-gray-600">Verified leads using advanced ads.</p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-megaphone digital-icon mb-4"></i>
+                    <h3 class="text-xl font-bold text-[#314495] mb-2">Social Media Management</h3>
+                    <p class="text-gray-600">Daily posts, reels & engagement.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-20 px-4 bg-[#f7fafc]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4">Our Work</h2>
+            <p class="text-md sm:text-lg text-gray-600 text-center mb-12">Ad creatives & social posts</p>
+
+            <div class="masonry">
+                <video src="digital1.mp4" class="rounded-2xl shadow-lg hover:scale-[1.04] transition" autoplay muted loop playsinline></video>
+                <video src="digital2.mp4" class="rounded-2xl shadow-lg hover:scale-[1.04] transition" autoplay muted loop playsinline></video>
+                <video src="digital3.mp4" class="rounded-2xl shadow-lg hover:scale-[1.04] transition" autoplay muted loop playsinline></video>
+                <video src="digital1-1.mp4" class="rounded-2xl shadow-lg hover:scale-[1.04] transition" autoplay muted loop playsinline></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-3xl md:text-4xl text-[#314495] font-bold text-center mb-4">Pricing Plans</h2>
+            <p class="text-md sm:text-lg text-gray-600 text-center mb-12">Choose the best package</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+                <div class="card bg-white p-8 rounded-xl border shadow-sm">
+                    <h3 class="text-2xl font-bold text-[#314495] mb-4">Starter</h3>
+                    <p class="mb-4 text-gray-600">For small businesses</p>
+                    <h4 class="text-4xl font-bold mb-6">₹2,999</h4>
+                    <button class="w-full bg-[#314495] text-white py-3 rounded-lg">Get Started</button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl border-2 border-[#16abe7]">
+                    <h3 class="text-2xl font-bold text-[#314495] mb-4">Business</h3>
+                    <p class="mb-4 text-gray-600">Best for shops & brands</p>
+                    <h4 class="text-4xl font-bold mb-6">₹4,999</h4>
+                    <button class="w-full bg-[#16abe7] text-white py-3 rounded-lg">Get Started</button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl border shadow-sm">
+                    <h3 class="text-2xl font-bold text-[#314495] mb-4">Premium</h3>
+                    <p class="mb-4 text-gray-600">For high-growth brands</p>
+                    <h4 class="text-4xl font-bold mb-6">₹7,999</h4>
+                    <button class="w-full bg-[#314495] text-white py-3 rounded-lg">Get Started</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 text-center text-white bg-gradient-to-r from-[#2c5282] to-[#314495]">
+        <h2 class="text-4xl font-bold mb-4">Ready to Grow Your Business?</h2>
+        <p class="opacity-90 mb-8 max-w-2xl mx-auto">
+            Contact us for custom digital marketing packages.
+        </p>
+        <a href="mailto:samudhratechsolutions@gmail.com" 
+           class="bg-white text-[#314495] px-10 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+            Contact Us
+        </a>
+    </section>
+<div class="h-5 bg-white">
+</div>
+    <!-- FOOTER -->
+   <footer id="contactSection" class="bg-[#314495] text-white py-10">
+    <div class="container mx-auto px-4 text-center space-y-6">
+
+        <div class="flex flex-col items-center space-y-4">
+
+            <!-- Email -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-xl"></i>
+                <a href="mailto:samudhratechsolutions@gmail.com" 
+                   class="text-white hover:text-gray-200 text-sm">
+                   samudhratechsolutions@gmail.com
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center gap-6 text-2xl">
+                <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0YdltgD%2FSdmBFo9XCdbhkA%3D%3D"
+                   class="hover:text-gray-200">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/samudhra_tuty?igsh=MWN0cW90dm8wMTBjMw=="
+                   class="hover:text-gray-200">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-xl"></i>
+                <a href="tel:+917339470191" class="text-white hover:text-gray-200 text-sm">
+                    +91 73394 70191
+                </a>
+            </div>
+
+            <!-- Location -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-xl"></i>
+                <span class="text-sm">Thoothukudi, Tamilnadu</span>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-sm opacity-80">© 2025 Samudhra Tech Solutions. All rights reserved.</p>
+
+    </div>
+</footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+</body>
+</html>
