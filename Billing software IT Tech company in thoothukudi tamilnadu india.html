@@ -2,30 +2,580 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing & Invoice Management Software | Samudhra Tech Solutions</title>
-    <meta name="description" content="Complete billing and invoice management solution with dashboard analytics, purchase/sales tracking, and financial reporting.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Billing & Invoice Management Software | Samudhra Tech Solutions | Thoothukudi, Tamil Nadu</title>
+    <meta name="description" content="Complete billing and invoice management software in Thoothukudi, Tamil Nadu. Dashboard analytics, purchase/sales tracking, and financial reporting for businesses. Call +91 73394 70191.">
+    <meta name="keywords" content="billing software Thoothukudi, invoice management Tamil Nadu, billing software company Thoothukudi, accounting software, financial management software, GST billing software, invoice automation, purchase tracking software, sales management software">
     
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="Samudhra Tech Solutions">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://samudhratechsolutions.biz/Billing-software-IT-Tech-company-in-thoothukudi-tamilnadu-india.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Billing & Invoice Management Software | Samudhra Tech Solutions">
+    <meta property="og:description" content="Complete billing and invoice management solution with dashboard analytics, purchase/sales tracking, and financial reporting for businesses in Thoothukudi.">
+    <meta property="og:url" content="https://samudhratechsolutions.biz/Billing-software-IT-Tech-company-in-thoothukudi-tamilnadu-india.html">
+    <meta property="og:image" content="https://samudhratechsolutions.biz/Sts_logo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Samudhra Tech Solutions">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Billing & Invoice Management Software",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web-based",
+        "offers": {
+            "@type": "Offer",
+            "price": "699",
+            "priceCurrency": "INR"
+        },
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Samudhra Tech Solutions",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Thoothukudi",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+            },
+            "telephone": "+917339470191"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="Sts_logo.ico">
+    
+    <!-- External Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#314495',
+                        'secondary': '#16abe7',
+                        'tertiary': '#a2ddf2',
+                        'text-light': '#f3f4f6',
+                        'text-dark': '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body, html { margin: 0; padding: 0; overflow-x: hidden; }
+        /* CSS Variables for Dynamic Theme Color Swapping */
         :root {
+            --bg-color: #f9fafb;
             --primary-color: #314495;
             --secondary-color: #16abe7;
             --tertiary-color: #a2ddf2;
-            --accent-color: #2c5282;
-            --light-bg: #f7fafc;
+            --text-dark-color: #1f2937;
+            --text-light-color: #f3f4f6;
         }
-        .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 150ms; }
-        .card { transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; position: relative; z-index: 1; border-radius: 12px; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+
+        .dark {
+            --bg-color: #121212;
+            --primary-color: #00AAEE;
+            --secondary-color: #5A6DFF;
+            --tertiary-color: #5a6dff;
+            --text-dark-color: #E0E0E0;
+            --text-light-color: #121212;
+        }
+
+        /* Custom Styles */
+        .transition-colors {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+            border-radius: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            border-radius: 12px;
+            filter: blur(10px);
+            z-index: -1;
+            opacity: 0.6;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Floating buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .fab.whatsapp {
+            background: blue;
+        }
+
+        .fab.top {
+            background: var(--primary-color);
+        }
+
+        .tooltip {
+            position: absolute;
+            right: 70px;
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent transparent transparent #333;
+        }
+
+        .fab:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Mobile menu transition */
+        .mobile-menu-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* ================= MOBILE SPECIFIC STYLES ================= */
+        @media (max-width: 640px) {
+            /* Container adjustments */
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Hero section adjustments */
+            section:first-of-type h1 {
+                font-size: 1.75rem !important;
+                line-height: 2.25rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            section:first-of-type p {
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            section:first-of-type .flex {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            
+            section:first-of-type a {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+                padding: 0.875rem 1.5rem !important;
+            }
+            
+            /* Pricing section mobile */
+            .md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+            
+            .md\:p-8 {
+                padding: 1.5rem !important;
+            }
+            
+            .md\:mb-8 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Software showcase grid mobile */
+            .lg\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+            }
+            
+            .md\:gap-12 {
+                gap: 2rem !important;
+            }
+            
+            .md\:mb-12 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .md\:mb-6 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Features grid mobile */
+            .md\:grid-cols-2.lg\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+            
+            .p-6 {
+                padding: 1.25rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Benefits section mobile */
+            .md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+            
+            .p-6 {
+                padding: 1.25rem !important;
+            }
+            
+            /* Integration section mobile grid */
+            .grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.75rem;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 a {
+                padding: 0.75rem !important;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 i {
+                font-size: 1.5rem !important;
+                margin-bottom: 0.5rem;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 p {
+                font-size: 0.875rem !important;
+            }
+            
+            /* Contact section mobile layout */
+            .lg\:flex-row {
+                flex-direction: column !important;
+                gap: 2rem !important;
+            }
+            
+            .lg\:w-1\/2 {
+                width: 100% !important;
+            }
+            
+            /* Floating buttons mobile */
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .fab {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .tooltip {
+                display: none; /* Hide tooltips on mobile */
+            }
+            
+            /* Footer mobile adjustments */
+            footer .flex-col.md\:flex-row {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            footer .text-center p {
+                padding: 0 0.5rem;
+                font-size: 0.875rem;
+            }
+            
+            /* Section padding mobile */
+            section {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+            }
+            
+            .py-12 {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+            }
+            
+            .py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Improve touch targets */
+            a, button {
+                min-height: 44px;
+                min-width: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Mobile text sizes */
+            h1 {
+                font-size: 1.75rem !important;
+                line-height: 2.25rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+                line-height: 2rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important;
+                line-height: 1.75rem !important;
+            }
+            
+            .text-3xl {
+                font-size: 1.75rem !important;
+            }
+            
+            .text-4xl {
+                font-size: 2rem !important;
+            }
+            
+            .text-5xl {
+                font-size: 2.25rem !important;
+            }
+            
+            /* Fix iframe overflow */
+            iframe {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Prevent text overflow */
+            .break-word {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
+                hyphens: auto;
+            }
+            
+            /* Mobile menu button */
+            #mobile-menu-button {
+                min-width: 44px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Benefits section mobile */
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(1, 1fr) !important;
+                gap: 1rem;
+            }
+            
+            /* Invoice preview section */
+            .lg\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Call to action mobile */
+            .mb-12 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Price display mobile */
+            .text-4xl {
+                font-size: 2rem !important;
+            }
+        }
+
+        /* ================= TABLET SPECIFIC STYLES ================= */
+        @media (min-width: 641px) and (max-width: 768px) {
+            .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            /* Pricing grid tablet */
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem;
+            }
+            
+            /* Features grid tablet */
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Benefits grid tablet */
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Integration grid tablet */
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Hero text tablet */
+            section:first-of-type h1 {
+                font-size: 2.25rem !important;
+                line-height: 2.75rem !important;
+            }
+        }
+
+        /* ================= DESKTOP LAPTOP STYLES ================= */
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            }
+            
+            .lg\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            }
+        }
+
+        /* ================= SMALL MOBILE (Very small screens) ================= */
+        @media (max-width: 400px) {
+            section:first-of-type h1 {
+                font-size: 1.5rem !important;
+                line-height: 2rem !important;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .floating-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .fab {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .p-6 {
+                padding: 1rem !important;
+            }
+            
+            .text-xl {
+                font-size: 1.125rem !important;
+            }
+        }
+
+        /* Improve touch scrolling */
+        html {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent zoom on input focus for iOS */
+        @media screen and (max-width: 768px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Fix for very small height screens */
+        @media (max-height: 600px) {
+            .floating-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
         
-        /* Custom Header Styles */
+        /* Header Styles for consistency */
         .top-header {
             background: var(--primary-color);
             color: white;
@@ -36,343 +586,242 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+
+        .mobile-menu {
             background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px;
-        }
-        
-        .logo-circle img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        .logo-text h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .logo-text p {
-            margin: 0;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .contact-item a, .contact-item span {
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        
-        .contact-item i {
-            font-size: 1rem;
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline:hover {
-            background: white;
-            color: var(--primary-color);
-        }
-        
-        /* Custom Footer Styles */
-        #contactSection {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .footer-contact {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-          .footer-contact .social-links {
-            display: flex;
-            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .footer-contact .social-links a {
-            font-size: 1.2rem;
+        .dark .mobile-menu {
+            background: #1f2937;
         }
-        #contactSection p {
-            margin: 0.5rem 0;
-            opacity: 0.9;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-         .footer-contact {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            .footer-contact .social-links {
-                justify-content: center;
-            }
     </style>
 </head>
-<body class="bg-white text-gray-900 font-sans transition-colors duration-300">
+<body class="bg-gray-50 text-gray-900 font-sans transition-colors duration-300 dark:bg-[#121212] dark:text-[#E0E0E0] pt-16">
 
-    <!-- Custom Header -->
-    <div class="top-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <div class="logo-circle">
-                        <img src="Sts_logo.jpg" alt="Samudhra Tech Solutions Logo">
-                    </div>
-                    <div class="logo-text">
-                        <h1>Samudhra Tech Solutions</h1>
-                        <!-- <p>Technical Career Services</p> -->
-                    </div>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 w-full z-50 dark:bg-[#1f2937] dark:text-[#E0E0E0]">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo and Company Name -->
+            <a href="index.html" class="text-2xl font-bold text-primary flex items-center dark:text-primary flex items-center space-x-2">
+                <img src="Sts_logo.ico" alt="Samudhra Tech Solutions Logo" class="h-10 w-10 mr-2 rounded-full">
+                <div class="flex flex-col items-start">
+                    <span class="text-primary text-sm sm:text-lg font-bold dark:text-[#E0E0E0]">Samudhra Tech Solutions</span>
+                    <span class="text-xs sm:text-sm font-semibold text-secondary dark:text-secondary-600 mt-1 self-end">Your Business, Simplified.</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation Menu -->
+            <div class="space-x-2 md:space-x-4 hidden md:flex items-center">
+                <a href="index.html" class="text-primary hover:text-secondary transition-colors font-semibold flex items-center px-2 py-1 dark:text-[#E0E0E0] dark:hover:text-secondary">
+                    <i class="bi bi-house-door-fill text-tertiary mr-1 dark:text-secondary"></i> Back to Home
+                </a>
+                
+                <!-- Theme Toggle -->
+                <div class="relative group">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-white dark:bg-[#1f2937] text-white-800 dark:text-white transition-colors">
+                        <i id="theme-icon" class="bi bi-sun-fill text-xl text-primary dark:text-secondary"></i>
+                    </button>
                 </div>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+917339470191">+91 73394 70191</a>
-                    </div>
-                    <div class="nav-buttons">
-                        <a href="index.html" class="btn btn-outline">
-                            <i class="fas fa-arrow-left"></i> Back to Home
-                        </a>
-                    </div>
-                </div>
+                <a href="#contact" class="bg-secondary text-white py-2 px-4 rounded-full font-semibold hover:bg-primary transition-colors">Get started</a>
             </div>
-        </div>
-    </div>
 
-    <main class="pt-32">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-primary dark:text-[#E0E0E0]">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mobile-menu shadow-lg py-4 dark:bg-[#1f2937] px-4 mobile-menu-transition">
+            <a href="index.html" class="block py-3 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-[#E0E0E0] dark:hover:bg-gray-800 rounded-lg">
+                <i class="bi bi-house-door-fill text-tertiary mr-3 dark:text-secondary"></i> Back to Home
+            </a>
+            
+            <!-- Mobile Theme Toggle Button -->
+            <button id="mobile-theme-toggle" class="block w-full py-3 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold text-left dark:text-[#E0E0E0] dark:hover:bg-gray-800 rounded-lg">
+                <i id="mobile-theme-icon" class="bi bi-palette mr-2"></i> Toggle Theme
+            </button>
+            
+            <a href="#contact" class="block py-3 px-4 mt-2 bg-secondary text-white text-center rounded-lg font-semibold hover:bg-primary transition-colors">
+                <i class="bi bi-rocket-takeoff-fill mr-2"></i> Get Started
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pt-8">
 
         <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-[#314495] to-[#16abe7] text-white py-20 px-4">
-            <div class="container mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6" data-aos="fade-up">Smart Billing Solutions</h1>
-                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    Transform your financial management with our intuitive billing and invoice software
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#features" class="bg-white text-[#314495] py-3 px-8 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                        Explore Features
-                    </a>
-                </div>
+        <section class="py-8 md:py-20 text-center px-2 md:px-4">
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-primary mb-4 dark:text-primary break-word">Smart Billing Solutions in Thoothukudi</h1>
+            <p class="text-base md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto dark:text-gray-300 break-word">
+                Transform your financial management with our intuitive billing and invoice software designed for businesses in Tamil Nadu.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+                <a href="#features" class="bg-secondary text-white py-3 px-6 md:px-8 rounded-full font-semibold text-base md:text-lg hover:bg-primary transition-colors shadow-lg flex items-center justify-center">
+                    Explore Features
+                </a>
+                <a href="#contact" class="bg-white text-primary border-2 border-primary py-3 px-6 md:px-8 rounded-full font-semibold text-base md:text-lg hover:bg-primary hover:text-white transition-colors shadow-lg dark:bg-transparent dark:border-secondary dark:text-secondary dark:hover:bg-secondary dark:hover:text-white flex items-center justify-center">
+                    <i class="bi bi-telephone-fill mr-2"></i>Contact Us
+                </a>
             </div>
         </section>
 
         <!-- Pricing Section -->
-        <section class="py-20 px-4 bg-[#f7fafc]">
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-tertiary dark:bg-[#1f2937] rounded-2xl mb-8 md:mb-12">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">Simple, Transparent Pricing</h2>
-                <p class="text-xl text-gray-600 text-center mb-16" data-aos="fade-up">Choose the perfect plan for your business needs</p>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-8 dark:text-primary break-word">Simple, Transparent Pricing</h2>
+                <p class="text-center text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] max-w-3xl mx-auto mb-8 md:mb-12 break-word">Choose the perfect plan for your business needs in Thoothukudi</p>
                 
-                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
                     <!-- Basic Plan -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-[#314495] mb-2">Basic</h3>
+                    <div class="card bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="text-center mb-6 md:mb-8">
+                            <h3 class="text-lg md:text-2xl font-bold text-primary mb-2 dark:text-primary break-word">Basic</h3>
                             <div class="flex justify-center items-baseline">
-                                <span class="text-4xl font-bold">₹699</span>
-                                <span class="text-gray-500 ml-2">/month</span>
+                                <span class="text-3xl md:text-4xl font-bold break-word">₹699</span>
+                                <span class="text-gray-500 ml-2 break-word">/month</span>
                             </div>
                         </div>
-                        <ul class="space-y-4 mb-8">
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Invoice Management</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Invoice Management</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Basic Dashboard</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Basic Dashboard</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Customer Management</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Customer Management</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Email Support</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Email Support</span>
                             </li>
                         </ul>
-                        <button class="w-full bg-[#314495] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#2c5282] transition-colors">
+                        <a href="tel:+917339470191" class="block w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center break-word">
                             Get Started
-                        </button>
+                        </a>
                     </div>
 
                     <!-- Standard Plan -->
-                    <div class="card bg-white p-8 rounded-xl border-2 border-[#16abe7] shadow-lg relative" data-aos="fade-up" data-aos-delay="200">
-                        <div class="absolute top-0 right-0 bg-[#16abe7] text-white px-4 py-1 rounded-bl-lg rounded-tr-lg font-semibold">
+                    <div class="card bg-white p-6 md:p-8 rounded-xl border-2 border-secondary shadow-lg relative dark:bg-[#2d3748]">
+                        <div class="absolute top-0 right-0 bg-secondary text-white px-3 md:px-4 py-1 rounded-bl-lg rounded-tr-lg font-semibold text-sm md:text-base break-word">
                             Most Popular
                         </div>
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-[#314495] mb-2">Standard</h3>
+                        <div class="text-center mb-6 md:mb-8">
+                            <h3 class="text-lg md:text-2xl font-bold text-primary mb-2 dark:text-primary break-word">Standard</h3>
                             <div class="flex justify-center items-baseline">
-                                <span class="text-4xl font-bold">₹1299</span>
-                                <span class="text-gray-500 ml-2">/month</span>
+                                <span class="text-3xl md:text-4xl font-bold break-word">₹1299</span>
+                                <span class="text-gray-500 ml-2 break-word">/month</span>
                             </div>
                         </div>
-                        <ul class="space-y-4 mb-8">
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Everything in Basic</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Everything in Basic</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Advanced Dashboard</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Advanced Dashboard</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Financial Reports</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Financial Reports</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Purchase Tracking</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Purchase Tracking</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Priority Support</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Priority Support</span>
                             </li>
                         </ul>
-                        <button class="w-full bg-[#16abe7] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1394c7] transition-colors">
+                        <a href="tel:+917339470191" class="block w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center break-word">
                             Get Started
-                        </button>
+                        </a>
                     </div>
 
                     <!-- Premium Plan -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-[#314495] mb-2">Premium</h3>
+                    <div class="card bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="text-center mb-6 md:mb-8">
+                            <h3 class="text-lg md:text-2xl font-bold text-primary mb-2 dark:text-primary break-word">Premium</h3>
                             <div class="flex justify-center items-baseline">
-                                <span class="text-4xl font-bold">₹2499</span>
-                                <span class="text-gray-500 ml-2">/month</span>
+                                <span class="text-3xl md:text-4xl font-bold break-word">₹2499</span>
+                                <span class="text-gray-500 ml-2 break-word">/month</span>
                             </div>
                         </div>
-                        <ul class="space-y-4 mb-8">
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Everything in Standard</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Everything in Standard</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Custom Reporting</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Custom Reporting</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Multi-user Access</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Multi-user Access</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">API Integration</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">API Integration</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Dedicated Account Manager</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Dedicated Account Manager</span>
                             </li>
                         </ul>
-                        <button class="w-full bg-[#314495] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#2c5282] transition-colors">
+                        <a href="tel:+917339470191" class="block w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center break-word">
                             Get Started
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Software Showcase -->
-        <section class="py-20 px-4 bg-white">
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-white dark:bg-[#121212] rounded-2xl mb-8 md:mb-12">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-16" data-aos="fade-up">See Our Software in Action</h2>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-8 dark:text-primary break-word">See Our Billing Software in Action</h2>
                 
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right">
-                        <div class="bg-gradient-to-br from-[#314495] to-[#16abe7] p-1 rounded-2xl shadow-xl">
-                            <div class="bg-white rounded-xl p-2">
-                                <img src="dashboard.png" 
-                                     alt="Billing Software Dashboard" 
+                <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div>
+                        <div class="bg-gradient-to-br from-primary to-secondary p-1 rounded-2xl shadow-xl">
+                            <div class="bg-white dark:bg-[#2d3748] rounded-xl p-2">
+                                <img src="Billing-software-it-company-software-company-tech-information-digital-agency-thoothukudi-tuty-tamilnadu-tn-TN-india.png" 
+                                     alt="Billing Software Dashboard - Samudhra Tech Solutions Thoothukudi" 
                                      class="w-full h-auto rounded-lg">
                             </div>
                         </div>
                     </div>
                     
-                    <div data-aos="fade-left">
-                        <h3 class="text-2xl font-bold text-[#314495] mb-6">Beautiful & Functional Dashboard</h3>
-                        <p class="text-lg text-gray-600 mb-6">
+                    <div>
+                        <h3 class="text-lg md:text-2xl font-bold text-primary mb-4 md:mb-6 dark:text-primary break-word">Beautiful & Functional Dashboard</h3>
+                        <p class="text-base md:text-lg text-gray-600 dark:text-[#E0E0E0] mb-6 break-word">
                             Experience a clean, modern interface that makes financial management effortless. Our dashboard provides at-a-glance insights into your business performance.
                         </p>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Real-time Analytics</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Real-time Analytics</span>
                             </div>
                             <div class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Quick Actions</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Quick Actions</span>
                             </div>
                             <div class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Customizable Widgets</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Customizable Widgets</span>
                             </div>
                             <div class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Mobile Responsive</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Mobile Responsive</span>
                             </div>
                         </div>
                     </div>
@@ -381,103 +830,103 @@
         </section>
 
         <!-- Features Section -->
-        <section id="features" class="py-20 px-4 bg-[#f7fafc]">
+        <section id="features" class="py-8 md:py-20 px-2 md:px-4 bg-tertiary dark:bg-[#1f2937] rounded-2xl mb-8 md:mb-12">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">Powerful Features</h2>
-                <p class="text-xl text-gray-600 text-center mb-16" data-aos="fade-up">Everything you need to manage your finances efficiently</p>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-8 dark:text-primary break-word">Powerful Features for Your Business</h2>
+                <p class="text-center text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] max-w-3xl mx-auto mb-8 md:mb-12 break-word">Everything you need to manage your finances efficiently in Thoothukudi</p>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Feature 1 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-[#a2ddf2] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-speedometer2 text-[#314495] text-2xl"></i>
+                    <div class="card bg-white p-6 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="bg-tertiary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-speedometer2 text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Smart Dashboard</h3>
-                        <p class="text-gray-600">Get instant business insights with customizable widgets and real-time metrics.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Smart Dashboard</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Get instant business insights with customizable widgets and real-time metrics.</p>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-                        <div class="bg-[#a2ddf2] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-receipt text-[#314495] text-2xl"></i>
+                    <div class="card bg-white p-6 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="bg-tertiary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-receipt text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Invoice Management</h3>
-                        <p class="text-gray-600">Create professional invoices, track payments, and manage billing cycles seamlessly.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Invoice Management</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Create professional invoices, track payments, and manage billing cycles seamlessly.</p>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                        <div class="bg-[#a2ddf2] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-graph-up text-[#314495] text-2xl"></i>
+                    <div class="card bg-white p-6 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="bg-tertiary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-graph-up text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Financial Reports</h3>
-                        <p class="text-gray-600">Generate detailed financial reports with charts and export capabilities.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Financial Reports</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Generate detailed financial reports with charts and export capabilities.</p>
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="400">
-                        <div class="bg-[#a2ddf2] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-people text-[#314495] text-2xl"></i>
+                    <div class="card bg-white p-6 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="bg-tertiary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-people text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Customer Management</h3>
-                        <p class="text-gray-600">Maintain complete customer profiles with payment history and communication logs.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Customer Management</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Maintain complete customer profiles with payment history and communication logs.</p>
                     </div>
 
                     <!-- Feature 5 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="500">
-                        <div class="bg-[#a2ddf2] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-shield-check text-[#314495] text-2xl"></i>
+                    <div class="card bg-white p-6 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="bg-tertiary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-shield-check text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Data Security</h3>
-                        <p class="text-gray-600">Bank-level encryption and automated backups ensure your data is always safe.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Data Security</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Bank-level encryption and automated backups ensure your data is always safe.</p>
                     </div>
 
                     <!-- Feature 6 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="600">
-                        <div class="bg-[#a2ddf2] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-phone text-[#314495] text-2xl"></i>
+                    <div class="card bg-white p-6 rounded-xl border border-gray-200 shadow-sm dark:bg-[#2d3748]">
+                        <div class="bg-tertiary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-phone text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Mobile Ready</h3>
-                        <p class="text-gray-600">Access your billing data anywhere, anytime with our mobile-responsive design.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Mobile Ready</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Access your billing data anywhere, anytime with our mobile-responsive design.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Invoice Preview -->
-        <section class="py-20 px-4 bg-white">
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-white dark:bg-[#121212] rounded-2xl mb-8 md:mb-12">
             <div class="container mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right">
-                        <h2 class="text-3xl md:text-4xl font-bold text-[#314495] mb-6">Professional Invoicing</h2>
-                        <p class="text-lg text-gray-600 mb-6">
+                <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div>
+                        <h2 class="text-xl md:text-3xl font-bold text-primary mb-4 md:mb-6 dark:text-primary break-word">Professional Invoicing for Thoothukudi Businesses</h2>
+                        <p class="text-base md:text-lg text-gray-600 dark:text-[#E0E0E0] mb-6 break-word">
                             Create stunning, professional invoices that impress your clients and get you paid faster.
                         </p>
-                        <ul class="space-y-3 mb-8">
+                        <ul class="space-y-3 md:space-y-4 mb-8">
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Customizable invoice templates</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Customizable invoice templates</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Automatic tax calculations</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Automatic tax calculations</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">Multiple currency support</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Multiple currency support</span>
                             </li>
                             <li class="flex items-center">
-                                <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                                <span class="text-gray-700">PDF export and email sending</span>
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">PDF export and email sending</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <div data-aos="fade-left">
-                        <div class="bg-gradient-to-br from-[#314495] to-[#16abe7] p-1 rounded-2xl shadow-xl">
-                            <div class="bg-white rounded-xl p-4">
-                                <img src="invoice.png" 
-                                     alt="Professional Invoice" 
+                    <div>
+                        <div class="bg-gradient-to-br from-primary to-secondary p-1 rounded-2xl shadow-xl">
+                            <div class="bg-white dark:bg-[#2d3748] rounded-xl p-4">
+                                <img src="invoice-billing-software-sales-invoices-gst-invoice-tally-product-sales-leadger-leads-top-it-company-in-thoothukudi-tamilnadu-india.png" 
+                                     alt="Professional Invoice Software - Samudhra Tech Solutions" 
                                      class="w-full h-auto rounded-lg">
                             </div>
                         </div>
@@ -487,77 +936,434 @@
         </section>
 
         <!-- Benefits Section -->
-        <section class="py-20 px-4 bg-gradient-to-r from-[#2c5282] to-[#314495] text-white">
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-gradient-to-r from-[#2c5282] to-primary text-white rounded-2xl mb-8 md:mb-12">
             <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Why Choose Our Billing Software?</h2>
-                <p class="text-xl mb-16 max-w-2xl mx-auto opacity-90" data-aos="fade-up">Join thousands of satisfied businesses that trust our solution</p>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 break-word">Why Choose Our Billing Software?</h2>
+                <p class="text-base md:text-lg mb-8 md:mb-16 max-w-2xl mx-auto opacity-90 break-word">Join thousands of satisfied businesses in Tamil Nadu that trust our solution</p>
                 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bi bi-clock-history text-4xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">Save Time</h3>
-                        <p class="opacity-90">Automate repetitive tasks and focus on growing your business</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                        <i class="bi bi-clock-history text-3xl md:text-4xl mb-4"></i>
+                        <h3 class="text-lg md:text-xl font-bold mb-4 break-word">Save Time</h3>
+                        <p class="opacity-90 text-sm md:text-base break-word">Automate repetitive tasks and focus on growing your business</p>
                     </div>
                     
-                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-graph-up-arrow text-4xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">Increase Revenue</h3>
-                        <p class="opacity-90">Get paid faster with automated reminders and online payments</p>
+                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                        <i class="bi bi-graph-up-arrow text-3xl md:text-4xl mb-4"></i>
+                        <h3 class="text-lg md:text-xl font-bold mb-4 break-word">Increase Revenue</h3>
+                        <p class="opacity-90 text-sm md:text-base break-word">Get paid faster with automated reminders and online payments</p>
                     </div>
                     
-                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-shield-check text-4xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">Stay Compliant</h3>
-                        <p class="opacity-90">Automatic tax calculations and audit-ready reporting</p>
+                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                        <i class="bi bi-shield-check text-3xl md:text-4xl mb-4"></i>
+                        <h3 class="text-lg md:text-xl font-bold mb-4 break-word">Stay Compliant</h3>
+                        <p class="opacity-90 text-sm md:text-base break-word">Automatic tax calculations and audit-ready reporting</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact" class="py-20 px-4 bg-white">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] mb-6" data-aos="fade-up">Ready to Get Started?</h2>
-                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    Take control of your finances today with our powerful billing software
+
+        <!-- Integration with Other Services -->
+        <section class="py-8 md:py-12 bg-tertiary dark:bg-[#1f2937] rounded-2xl p-4 md:p-6 mb-8 md:mb-12 mx-2 md:mx-0">
+            <h2 class="text-xl md:text-3xl font-bold text-primary text-center mb-6 md:mb-8 dark:text-primary break-word">Seamlessly Integrates with Our Other Services</h2>
+            <p class="text-center text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] mb-6 md:mb-8 max-w-3xl mx-auto break-word">
+                As a complete IT solutions provider in Thoothukudi, we ensure your billing software works perfectly with all your business systems.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
+                <a href="Website developement IT company in thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-white dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow">
+                    <i class="bi bi-globe text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary dark:text-primary text-sm md:text-base break-word">Web Development</p>
+                </a>
+                <a href="E-commerce best IT company in thoothukudi tamilnadu.html" class="block text-center p-3 md:p-4 bg-white dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow">
+                    <i class="bi bi-cart-check text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary dark:text-primary text-sm md:text-base break-word">E-Commerce</p>
+                </a>
+                <a href="CRM  IT company thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-white dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow">
+                    <i class="bi bi-people-fill text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary dark:text-primary text-sm md:text-base break-word">CRM</p>
+                </a>
+                <a href="Digital Marketing IT company thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-white dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow">
+                    <i class="bi bi-megaphone text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary dark:text-primary text-sm md:text-base break-word">Digital Marketing</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 md:py-20 px-4 bg-primary text-white dark:bg-[#1f2937]">
+            <div class="container mx-auto">
+                <h2 class="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 dark:text-primary break-word">Looking for Reliable Billing Software Solutions in Thoothukudi?</h2>
+                <p class="text-center text-base md:text-lg text-tertiary max-w-3xl mx-auto mb-8 md:mb-12 dark:text-secondary break-word">
+                    Let's discuss your Billing Software project and discover how Samudhra Tech Solutions, the leading Billing Software company in Thoothukudi, Tamil Nadu, can help you achieve your online business goals. Contact us for a free consultation today.
                 </p>
+                
+                <div class="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
+                    <!-- Contact Info -->
+                    <div class="lg:w-1/2 space-y-6">
+                        <!-- Address -->
+                        <div class="flex items-start">
+                            <i class="bi bi-geo-alt-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Billing Software Office in Thoothukudi</h3>
+                                <p class="text-tertiary text-sm md:text-base break-word">4/133X, Muthammal Colony, 3rd Street, Tuticorin-628002, Tamilnadu</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-start">
+                            <i class="bi bi-telephone-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Call Our Billing Software Team</h3>
+                                <a href="tel:+917339470191" class="text-tertiary hover:text-secondary transition-colors text-base md:text-lg font-bold break-word">+91 73394 70191</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <i class="bi bi-envelope-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Email for Billing Software Quotes</h3>
+                                <a href="mailto:samudhratechsolutions@gmail.com" class="text-tertiary hover:text-secondary transition-colors text-sm md:text-base break-word">samudhratechsolutions@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="flex items-start">
+                            <i class="bi bi-clock-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Business Hours</h3>
+                                <p class="text-tertiary text-sm md:text-base break-word">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                                <p class="text-tertiary text-sm md:text-base break-word">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="lg:w-1/2 mt-6 md:mt-0">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 break-word">Connect With Our Billing Software Team</h3>
+                        <p class="text-tertiary mb-4 md:mb-6 text-sm md:text-base break-word">Follow us for Billing Software tips, project updates, and technology insights.</p>
+                        <div class="flex space-x-4 md:space-x-6 mb-6 md:mb-8">
+                            <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326" class="text-2xl md:text-3xl hover:text-secondary transition-colors" aria-label="Connect on LinkedIn for billing software services">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/samudhra_tuty" class="text-2xl md:text-3xl hover:text-secondary transition-colors" aria-label="Follow on Instagram for billing software projects">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="mt-4 md:mt-6">
+                            <a href="tel:+917339470191" class="inline-block bg-secondary text-white py-3 px-4 md:px-6 lg:px-8 rounded-full font-semibold text-base md:text-lg hover:bg-white hover:text-primary transition-colors w-full md:w-auto text-center">
+                                <i class="fas fa-phone mr-2"></i> Call for Free Billing Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer id="contactSection">
-        <div class="container">
-            <div class="footer-contact">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
-                </div>
 
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0YdltgD%2FSdmBFo9XCdbhkA%3D%3D">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/samudhra_tuty?igsh=MWN0cW90dm8wMTBjMw==">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </div>
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/917339470191?text=Hi%20Samudhra%20Tech%20Solutions,%20I'm%20interested%20in%20your%20billing%20software%20services" target="_blank" class="fab whatsapp animate-bounce" aria-label="Chat on WhatsApp for billing software services">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="tooltip">Chat about billing software</span>
+        </a>
 
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+917339470191">+91 73394 70191</a>
-                </div>
+        <!-- Scroll to Top -->
+        <a href="#" class="fab top" aria-label="Scroll to Top" id="scrollToTop">
+            <i class="fa-solid fa-arrow-up"></i>
+            <span class="tooltip">Back to Top</span>
+        </a>
+    </div>
 
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Thoothukudi, Tamilnadu</span>
+    <!-- Footer -->
+    <footer class="bg-white shadow-sm text-primary py-6 md:py-8 dark:bg-[#1f2937] dark:text-[#E0E0E0] mt-6 md:mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6 md:mb-8">
+                <h4 class="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4 dark:text-primary break-word">Samudhra Tech Solutions</h4>
+                <p class="text-sm md:text-base text-gray-700 dark:text-[#E0E0E0] mb-4 break-word">
+                    Professional billing software solutions in Thoothukudi, Tamil Nadu. Complete invoicing, financial management, and reporting for businesses.
+                </p>
+                <p class="text-sm md:text-base text-gray-700 dark:text-[#E0E0E0] break-word">
+                    <strong>Billing Software Company in Thoothukudi, Tamil Nadu</strong>
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-300 dark:border-gray-700 pt-6">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] break-word">Phone: <a href="tel:+917339470191" class="hover:text-secondary">+91 73394 70191</a></p>
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] break-word">Email: <a href="mailto:samudhratechsolutions@gmail.com" class="hover:text-secondary">samudhratechsolutions@gmail.com</a></p>
+                </div>
+                
+                 <div class="text-center">
+                    <!-- Social Media Links -->
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326" target="_blank" class="text-2xl hover:text-secondary transition-colors" aria-label="Connect on LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/samudhra_tuty" target="_blank" class="text-2xl hover:text-secondary transition-colors" aria-label="Follow on Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/917339470191" target="_blank" class="text-2xl hover:text-secondary transition-colors" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] break-word">&copy; 2025 Samudhra Tech Solutions. All rights reserved.</p>
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] mt-1 break-word">Thoothukudi, Tamil Nadu, India</p>
                 </div>
             </div>
-
-            <p>© 2025 Samudhra Tech Solutions. All rights reserved.</p>
+            
+            <!-- SEO Footer Text -->
+            <div class="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-300 dark:border-gray-700 sr-only">
+                <p class="break-word">
+                    <strong>SEO Keywords:</strong>
+                    Billing software Thoothukudi, Invoice management Tamil Nadu, Billing software company Thoothukudi, 
+                    Accounting software Tamil Nadu, Financial management software, GST billing software Thoothukudi, 
+                    Invoice automation software, Purchase tracking software, Sales management software, 
+                    Billing and invoicing solutions, Business accounting software, Cloud billing software, 
+                    Automated invoicing system, Financial reporting software, Business management software Thoothukudi.
+                </p>
+            </div>
         </div>
     </footer>
 
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        // === THEME SYSTEM INTEGRATION ===
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get current theme from localStorage or system preference
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // Apply theme based on saved preference or system
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-sun-fill');
+                    themeIcon.classList.add('bi-moon-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-sun-fill');
+                    mobileThemeIcon.classList.add('bi-moon-fill');
+                }
+            } else {
+                document.documentElement.classList.remove('dark');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-moon-fill');
+                    themeIcon.classList.add('bi-sun-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-moon-fill');
+                    mobileThemeIcon.classList.add('bi-sun-fill');
+                }
+            }
+        });
+
+        // Listen for theme changes from other pages
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'theme') {
+                if (e.newValue === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    // Update desktop theme icon
+                    const themeIcon = document.getElementById('theme-icon');
+                    if (themeIcon) {
+                        themeIcon.classList.remove('bi-sun-fill');
+                        themeIcon.classList.add('bi-moon-fill');
+                    }
+                    // Update mobile theme icon
+                    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                    if (mobileThemeIcon) {
+                        mobileThemeIcon.classList.remove('bi-sun-fill');
+                        mobileThemeIcon.classList.add('bi-moon-fill');
+                    }
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    // Update desktop theme icon
+                    const themeIcon = document.getElementById('theme-icon');
+                    if (themeIcon) {
+                        themeIcon.classList.remove('bi-moon-fill');
+                        themeIcon.classList.add('bi-sun-fill');
+                    }
+                    // Update mobile theme icon
+                    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                    if (mobileThemeIcon) {
+                        mobileThemeIcon.classList.remove('bi-moon-fill');
+                        mobileThemeIcon.classList.add('bi-sun-fill');
+                    }
+                }
+            }
+        });
+
+        // Theme toggle button functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+        const toggleTheme = () => {
+            const isCurrentlyDark = document.documentElement.classList.contains('dark');
+            
+            if (isCurrentlyDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-moon-fill');
+                    themeIcon.classList.add('bi-sun-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-moon-fill');
+                    mobileThemeIcon.classList.add('bi-sun-fill');
+                }
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-sun-fill');
+                    themeIcon.classList.add('bi-moon-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-sun-fill');
+                    mobileThemeIcon.classList.add('bi-moon-fill');
+                }
+            }
+            
+            // Dispatch storage event to sync across tabs/pages
+            window.dispatchEvent(new StorageEvent('storage', {
+                key: 'theme',
+                newValue: document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+            }));
+        };
+
+        // Add event listeners to theme toggle buttons
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        // === MOBILE MENU FUNCTIONALITY ===
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle mobile menu
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Close menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Close mobile menu on window resize (if resized to desktop)
+        window.addEventListener('resize', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // === SMOOTH SCROLLING ===
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // === SCROLL TO TOP FUNCTIONALITY ===
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scrollToTopBtn) {
+            scrollToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollToTop();
+            });
+        }
+
+        // Show/hide scroll to top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const topButton = document.querySelector('.fab.top');
+            if (topButton) {
+                if (window.scrollY > 300) {
+                    topButton.style.display = 'flex';
+                } else {
+                    topButton.style.display = 'none';
+                }
+            }
+        });
+
+        // Initialize - hide top button on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const topButton = document.querySelector('.fab.top');
+            if (topButton) {
+                topButton.style.display = 'none';
+            }
+            
+            // Add animation delay for better mobile performance
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Mobile-specific enhancements
+        if (window.innerWidth <= 768) {
+            // Prevent zoom on double-tap
+            document.addEventListener('touchstart', function(event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            }, { passive: false });
+        }
     </script>
 </body>
 </html>

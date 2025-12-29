@@ -2,248 +2,444 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Platform | Samudhra Tech Solutions | Thoothukudi,TamilNadu</title>
-    <meta name="description" content="Premium e-commerce solutions with modern technology and business practices.">
-    <link rel="icon" type="image/png" href="Sts_logo.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>E-commerce Solutions & Online Store Development in Thoothukudi | Samudhra Tech Solutions</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Professional e-commerce solutions in Thoothukudi, Tamil Nadu. Build online stores with secure payment gateways, inventory management, and mobile-responsive design. Call +91 73394 70191.">
+    <meta name="keywords" content="e-commerce solutions Thoothukudi, online store development Tamil Nadu, e-commerce website development, online shopping platform, payment gateway integration, inventory management system, mobile e-commerce, responsive online store, e-commerce company Thoothukudi">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="Samudhra Tech Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://samudhratechsolutions.biz/E-commerce-best-IT-company-in-thoothukudi-tamilnadu.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="E-commerce Solutions & Online Store Development in Thoothukudi | Samudhra Tech Solutions">
+    <meta property="og:description" content="Professional e-commerce solutions in Thoothukudi, Tamil Nadu. Build online stores with secure payment gateways and mobile-responsive design.">
+    <meta property="og:image" content="https://samudhratechsolutions.biz/Sts_logo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Samudhra Tech Solutions">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="E-commerce Solutions & Online Store Development in Thoothukudi | Samudhra Tech Solutions">
+    <meta name="twitter:description" content="Professional e-commerce solutions in Thoothukudi, Tamil Nadu.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "E-commerce Solutions Development",
+        "serviceType": "E-commerce Website Development",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Samudhra Tech Solutions",
+            "image": "https://samudhratechsolutions.biz/Sts_logo.jpg",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "4/133X, Muthammal Colony, 3rd Street",
+                "addressLocality": "Tuticorin",
+                "postalCode": "628002",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+            },
+            "telephone": "+917339470191"
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Tamil Nadu"
+        },
+        "description": "Professional e-commerce solutions in Thoothukudi, Tamil Nadu offering online store development, payment gateway integration, inventory management, and mobile-responsive e-commerce platforms."
+    }
+    </script>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Sts_logo.ico">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-472QTHBH67"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-472QTHBH67');
+    </script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#314495',
+                        'secondary': '#16abe7',
+                        'tertiary': '#a2ddf2',
+                        'text-light': '#f3f4f6',
+                        'text-dark': '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
-        body, html { margin: 0; padding: 0; overflow-x: hidden; }
+        /* CSS Variables for Dynamic Theme Color Swapping */
         :root {
+            --bg-color: #f9fafb;
             --primary-color: #314495;
             --secondary-color: #16abe7;
             --tertiary-color: #a2ddf2;
-            --accent-color: #2c5282;
-            --light-bg: #f7fafc;
-            --neutral-color: #4a5568;
+            --text-dark-color: #1f2937;
+            --text-light-color: #f3f4f6;
         }
-        .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 150ms; }
-        .card { transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; position: relative; z-index: 1; border-radius: 12px; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
-        
-        /* Custom Header Styles with Background Image */
-        .top-header {
-            background: linear-gradient(rgba(49, 68, 149, 0.9), rgba(49, 68, 149, 0.9)), 
-                        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            padding: 1rem 0;
+
+        .dark {
+            --bg-color: #121212;
+            --primary-color: #00AAEE;
+            --secondary-color: #5A6DFF;
+            --tertiary-color: #5a6dff;
+            --text-dark-color: #E0E0E0;
+            --text-light-color: #121212;
+        }
+
+        /* Custom Styles from web development page */
+        .transition-colors {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+            border-radius: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            border-radius: 12px;
+            filter: blur(10px);
+            z-index: -1;
+            opacity: 0.6;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Floating buttons */
+        .floating-buttons {
             position: fixed;
-            top: 0;
-            width: 100%;
+            bottom: 30px;
+            right: 30px;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px;
-        }
-        
-        .logo-circle img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        .logo-text h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .logo-text p {
-            margin: 0;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .contact-item a, .contact-item span {
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        
-        .contact-item i {
-            font-size: 1rem;
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline:hover {
-            background: white;
-            color: var(--primary-color);
-        }
-        
-        /* Custom Footer Styles */
-        #contactSection {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .footer-contact {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-         .footer-contact .social-links {
-            display: flex;
+            flex-direction: column;
             gap: 15px;
         }
 
-        .footer-contact .social-links a {
-            font-size: 1.2rem;
-        }
-        
-        #contactSection p {
-            margin: 0.5rem 0;
-            opacity: 0.9;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        /* Video Section Styles */
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-        }
-        
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-        }
-        
-        .video-placeholder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             color: white;
-            cursor: pointer;
-            border-radius: 12px;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
+            position: relative;
         }
-        
-        .video-placeholder:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
-        
-        .video-placeholder i {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+
+        .fab.whatsapp {
+            background: blue;
         }
-        
-        .video-placeholder h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+
+        .fab.top {
+            background: var(--primary-color);
         }
-        
-        .video-placeholder p {
-            opacity: 0.9;
+
+        .tooltip {
+            position: absolute;
+            right: 70px;
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
         }
-        
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent transparent transparent #333;
+        }
+
+        .fab:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Square tiles styles from web dev page */
+        .square-tiles-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .square-tile {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dark .square-tile {
+            background: #2d3748;
+        }
+
+        .square-tile:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .tile-img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .tile-content {
+            padding: 1.2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Video Background Container */
+        .video-hero-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(49, 68, 149, 0.8), rgba(22, 171, 231, 0.8));
+            z-index: 2;
+        }
+
+        .dark .video-overlay {
+            background: linear-gradient(rgba(0, 170, 238, 0.8), rgba(90, 109, 255, 0.8));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
         /* Stats Section */
         .stats-section {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 4rem 0;
         }
-        
+
         .stat-item {
             text-align: center;
         }
-        
+
         .stat-number {
             font-size: 3rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-label {
             font-size: 1.1rem;
             opacity: 0.9;
         }
-        
+
+        /* Pricing Cards */
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .dark .pricing-card {
+            background: #2d3748;
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .photo-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background: white;
+        }
+
+        .dark .photo-card {
+            background: #2d3748;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.03);
+        }
+
+        .photo-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+
+        .dark .photo-image-container {
+            background: #374151;
+        }
+
+        .photo-image-container img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .photo-caption {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .dark .photo-caption {
+            background: #2d3748;
+        }
+
+        .photo-caption h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .photo-caption p {
+            margin: 0;
+            color: #4a5568;
+        }
+
+        .dark .photo-caption p {
+            color: #d1d5db;
+        }
+
         /* Testimonials */
         .testimonial-card {
             background: white;
@@ -252,13 +448,18 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-        
+
+        .dark .testimonial-card {
+            background: #2d3748;
+        }
+
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1.5rem;
             position: relative;
+            color: var(--text-dark-color);
         }
-        
+
         .testimonial-text::before {
             content: '"';
             font-size: 4rem;
@@ -268,486 +469,960 @@
             top: -1.5rem;
             left: -0.5rem;
         }
-        
+
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .author-avatar {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: var(--light-bg);
+            background: #f7fafc;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--secondary-color);
             font-weight: bold;
         }
-        
-        .author-info h4 {
-            margin: 0;
-            font-weight: bold;
+
+        .dark .author-avatar {
+            background: #374151;
         }
-        
-        .author-info p {
-            margin: 0;
-            opacity: 0.7;
-            font-size: 0.9rem;
+
+        /* Mobile menu transition */
+        .mobile-menu-transition {
+            transition: all 0.3s ease-in-out;
         }
-        
-       /* Fixed Image Gallery Styles */
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
 
-.photo-card {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    background: white;
-}
-
-.photo-card:hover {
-    transform: scale(1.03);
-}
-
-.photo-image-container {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f9fa;
-}
-
-.photo-image-container img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.photo-caption {
-    padding: 1.5rem;
-    background: white;
-}
-
-.photo-caption h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.photo-caption p {
-    margin: 0;
-    color: var(--neutral-color);
-}
- .footer-contact {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                text-align: center;
+        /* ================= MOBILE SPECIFIC STYLES ================= */
+        @media (max-width: 640px) {
+            /* Container adjustments */
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
             }
             
-            .footer-contact .social-links {
+            /* Hero section mobile */
+            .video-hero-container {
+                height: 80vh !important;
+                min-height: 500px;
+            }
+            
+            .video-hero-container h1 {
+                font-size: 1.75rem !important;
+                line-height: 2.25rem !important;
+                padding: 0 0.5rem;
+                margin-bottom: 1rem !important;
+            }
+            
+            .video-hero-container p {
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
+                padding: 0 0.5rem;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .video-hero-container .flex {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                padding: 0 0.5rem;
+            }
+            
+            .video-hero-container a {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+                padding: 0.875rem 1.5rem !important;
+            }
+            
+            /* Stats section mobile */
+            .stats-section {
+                padding: 2rem 0 !important;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem !important;
+            }
+            
+            .stat-label {
+                font-size: 0.875rem !important;
+            }
+            
+            /* Square tiles grid for mobile */
+            .square-tiles-container {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+            
+            .square-tile {
+                aspect-ratio: auto;
+                min-height: 320px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .tile-img {
+                height: 180px;
+            }
+            
+            .tile-content {
+                padding: 1rem;
+            }
+            
+            /* Photo gallery mobile */
+            .photo-gallery {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+            
+            .photo-image-container {
+                height: 200px;
+            }
+            
+            /* Pricing section mobile */
+            .md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+            
+            .pricing-card {
+                padding: 1.5rem !important;
+            }
+            
+            .pricing-card.popular {
+                transform: none !important;
+            }
+            
+            .popular-badge {
+                top: -10px;
+                right: 15px;
+                font-size: 0.75rem;
+                padding: 0.2rem 0.75rem;
+            }
+            
+            /* Features section mobile */
+            .md\:grid-cols-2.lg\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+            
+            .md\:p-8 {
+                padding: 1.25rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.5rem !important;
+            }
+            
+            .text-3xl {
+                font-size: 1.75rem !important;
+            }
+            
+            .text-4xl {
+                font-size: 2rem !important;
+            }
+            
+            .text-5xl {
+                font-size: 2.25rem !important;
+            }
+            
+            .text-6xl {
+                font-size: 2.5rem !important;
+            }
+            
+            /* Testimonials mobile */
+            .md\:grid-cols-2.lg\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* Integration section mobile grid */
+            .grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.75rem;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 a {
+                padding: 0.75rem !important;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 i {
+                font-size: 1.5rem !important;
+                margin-bottom: 0.5rem;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 p {
+                font-size: 0.875rem !important;
+            }
+            
+            /* Contact section mobile layout */
+            .lg\:flex-row {
+                flex-direction: column !important;
+                gap: 2rem !important;
+            }
+            
+            .lg\:w-1\/2 {
+                width: 100% !important;
+            }
+            
+            /* Floating buttons mobile */
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .fab {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .tooltip {
+                display: none; /* Hide tooltips on mobile */
+            }
+            
+            /* Footer mobile adjustments */
+            footer .flex-col.md\:flex-row {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            footer .text-center p {
+                padding: 0 0.5rem;
+                font-size: 0.875rem;
+            }
+            
+            /* Section padding mobile */
+            section {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .py-12 {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+            }
+            
+            .py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            .my-8 {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .my-12 {
+                margin-top: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            /* Improve touch targets */
+            a, button {
+                min-height: 44px;
+                min-width: 44px;
+                display: inline-flex;
+                align-items: center;
                 justify-content: center;
             }
+            
+            /* Mobile text sizes */
+            h1 {
+                font-size: 1.75rem !important;
+                line-height: 2.25rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+                line-height: 2rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important;
+                line-height: 1.75rem !important;
+            }
+            
+            /* Fix iframe overflow */
+            iframe {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Prevent text overflow */
+            .break-word {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
+                hyphens: auto;
+            }
+            
+            /* Mobile menu button */
+            #mobile-menu-button {
+                min-width: 44px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Photo caption mobile */
+            .photo-caption {
+                padding: 1rem !important;
+            }
+            
+            /* Hero video height adjustment for small screens */
+            @media (max-height: 600px) {
+                .video-hero-container {
+                    height: 70vh !important;
+                    min-height: 400px;
+                }
+            }
+        }
+
+        /* ================= TABLET SPECIFIC STYLES ================= */
+        @media (min-width: 641px) and (max-width: 768px) {
+            .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            /* Video hero tablet */
+            .video-hero-container {
+                height: 80vh;
+            }
+            
+            /* Square tiles tablet */
+            .square-tiles-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .square-tile {
+                aspect-ratio: 1 / 1;
+                min-height: auto;
+            }
+            
+            .tile-img {
+                height: 55%;
+            }
+            
+            /* Pricing grid tablet */
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem;
+            }
+            
+            .pricing-card.popular {
+                transform: none;
+            }
+            
+            /* Features grid tablet */
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Testimonials tablet */
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Integration grid tablet */
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Hero text tablet */
+            .video-hero-container h1 {
+                font-size: 2.5rem !important;
+                line-height: 3rem !important;
+            }
+            
+            /* Photo gallery tablet */
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ================= DESKTOP LAPTOP STYLES ================= */
+        @media (min-width: 1024px) {
+            .square-tiles-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            }
+            
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            }
+            
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ================= SMALL MOBILE (Very small screens) ================= */
+        @media (max-width: 400px) {
+            .video-hero-container h1 {
+                font-size: 1.5rem !important;
+                line-height: 2rem !important;
+            }
+            
+            .grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .floating-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .fab {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .square-tile {
+                min-height: 280px;
+            }
+            
+            .tile-img {
+                height: 50%;
+            }
+            
+            .photo-image-container {
+                height: 180px;
+            }
+        }
+
+        /* Improve touch scrolling */
+        html {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent zoom on input focus for iOS */
+        @media screen and (max-width: 768px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Fix for very small height screens */
+        @media (max-height: 600px) {
+            .floating-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .video-hero-container {
+                height: 70vh !important;
+                min-height: 400px;
+            }
+            
+            .square-tile {
+                min-height: 280px;
+            }
+            
+            .tile-img {
+                height: 50%;
+            }
+            
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
     </style>
 </head>
-<body class="bg-white text-gray-900 font-sans transition-colors duration-300">
+<body class="bg-gray-50 text-gray-900 font-sans transition-colors duration-300 dark:bg-[#121212] dark:text-[#E0E0E0] pt-16">
 
-    <!-- Custom Header with Background Image -->
-    <div class="top-header">
-        <div class="container">
-            <div class="header-content">
-                   <div class="logo-section">
-    <div class="logo-circle">
-        <img src="Sts_logo.jpg" alt="Samudhra Tech Solutions Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-    </div>
-    <div class="logo-text">
-        <h1>Samudhra Tech Solutions</h1>
-        <p>E-commerce Solutions</p>
-    </div>
-</div>
+    <!-- Header & Navigation (Matching Web Development Page) -->
+    <header class="bg-white shadow-sm fixed top-0 w-full z-50 dark:bg-[#1f2937] dark:text-[#E0E0E0]">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo and Company Name -->
+            <a href="index.html" class="text-2xl font-bold text-primary flex items-center dark:text-primary flex items-center space-x-2">
+                <img src="Sts_logo.ico" alt="Samudhra Tech Solutions Logo - E-commerce Company in Thoothukudi" class="h-10 w-10 mr-2 rounded-full">
+                <div class="flex flex-col items-start">
+                    <span class="text-primary text-sm sm:text-lg font-bold dark:text-[#E0E0E0]">Samudhra Tech Solutions</span>
+                    <span class="text-xs sm:text-sm font-semibold text-secondary dark:text-secondary-600 mt-1 self-end">Your Business, Simplified.</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation Menu -->
+            <div class="space-x-2 md:space-x-4 hidden md:flex items-center">
+                <a href="index.html" class="text-primary hover:text-secondary transition-colors font-semibold flex items-center px-2 py-1 dark:text-[#E0E0E0] dark:hover:text-secondary">
+                    <i class="bi bi-house-door-fill text-tertiary mr-1 dark:text-secondary"></i> Back to Home
+                </a>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
+                <!-- Theme Toggle -->
+                <div class="relative group">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-white dark:bg-[#1f2937] text-white-800 dark:text-white transition-colors">
+                        <i id="theme-icon" class="bi bi-sun-fill text-xl text-primary dark:text-secondary"></i>
+                    </button>
+                </div>
+                
+                <a href="#contact" class="bg-secondary text-white py-2 px-4 rounded-full font-semibold hover:bg-primary transition-colors">
+                    Get started
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-primary dark:text-[#E0E0E0]">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 dark:bg-[#1f2937] px-4 mobile-menu-transition">
+            <a href="index.html" class="block py-3 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold dark:text-[#E0E0E0] dark:hover:bg-gray-800 rounded-lg">
+                <i class="bi bi-house-door-fill text-tertiary mr-3 dark:text-secondary"></i> Back to Home
+            </a>
+            
+            <!-- Mobile Theme Toggle Button -->
+            <button id="mobile-theme-toggle" class="block w-full py-3 px-4 text-primary hover:bg-gray-100 transition-colors font-semibold text-left dark:text-[#E0E0E0] dark:hover:bg-gray-800 rounded-lg">
+                <i id="mobile-theme-icon" class="bi bi-palette mr-2"></i> Toggle Theme
+            </button>
+            
+            <a href="#contact" class="block py-3 px-4 mt-2 bg-secondary text-white text-center rounded-lg font-semibold hover:bg-primary transition-colors">
+                <i class="bi bi-rocket-takeoff-fill mr-2"></i> Get Started
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4">
+        <!-- Hero Section with Video Background -->
+        <section class="video-hero-container flex items-center justify-center text-white">
+            <video autoplay muted loop playsinline class="video-background">
+                <source src="samudhratechsolutions-it-company-services-ecommerce-top-company-in-thoothukudi-tamilnadu-india.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <div style="background: linear-gradient(135deg, #314495, #16abe7); position: absolute; width: 100%; height: 100%;"></div>
+            </video>
+            
+            <div class="video-overlay"></div>
+            
+            <div class="hero-content container mx-auto text-center px-4">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 md:mb-6 break-word" data-aos="fade-up">
+                    Professional E-commerce Solutions in Thoothukudi, Tamil Nadu
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 max-w-3xl mx-auto break-word" data-aos="fade-up" data-aos-delay="200">
+                    Build professional online stores with our modern e-commerce platform featuring secure payment gateways, inventory management, and mobile-responsive design.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center px-2 md:px-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#features" class="bg-white text-primary py-3 px-6 md:px-8 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center dark:bg-white dark:text-primary dark:hover:bg-gray-200">
+                        <i class="fas fa-store mr-2"></i> Explore Features
+                    </a>
+                    <a href="#pricing" class="bg-transparent border-2 border-white text-white py-3 px-6 md:px-8 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors shadow-lg flex items-center justify-center dark:border-white dark:hover:bg-white dark:hover:text-primary">
+                        <i class="fas fa-tags mr-2"></i> View Pricing
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section py-8 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number text-2xl md:text-3xl lg:text-4xl">500+</div>
+                        <div class="stat-label text-sm md:text-base break-word">Stores Launched</div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+917339470191">+91 73394 70191</a>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number text-2xl md:text-3xl lg:text-4xl">98%</div>
+                        <div class="stat-label text-sm md:text-base break-word">Client Satisfaction</div>
                     </div>
-                    <div class="nav-buttons">
-                        <a href="index.html" class="btn btn-outline">
-                            <i class="fas fa-arrow-left"></i> Back to Home
-                        </a>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number text-2xl md:text-3xl lg:text-4xl">24/7</div>
+                        <div class="stat-label text-sm md:text-base break-word">Customer Support</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-number text-2xl md:text-3xl lg:text-4xl">50+</div>
+                        <div class="stat-label text-sm md:text-base break-word">Payment Gateways</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <main class="pt-32">
-
-      <section class="relative h-screen flex items-center justify-center text-white overflow-hidden">
-    <!-- Local Video Background -->
-    <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        class="absolute top-0 left-0 w-full h-full object-cover z-0"
-    >
-        <source src="vision.mp4" type="video/mp4">
-        <!-- Fallback if video doesn't load -->
-        <div class="absolute inset-0 bg-gradient-to-br from-[#314495] to-[#16abe7]"></div>
-    </video>
-    
-    <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#314495]/80 to-[#16abe7]/80 z-10"></div>
-    
-    <!-- Content -->
-    <div class="container mx-auto text-center relative z-20 px-4">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6" data-aos="fade-up">E-commerce Solutions</h1>
-        <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-            Build professional online stores with our modern e-commerce platform
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-            <a href="#Kalpaka Organics" class="bg-white text-[#314495] py-3 px-8 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                Explore Features
-            </a>
-            <a href="#pricing" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-[#314495] transition-colors">
-                View Pricing
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Stats Section -->
-<section class="stats-section">
-    <div class="container mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Stores Launched</div>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Customer Support</div>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Countries Served</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <section class="py-20 px-4 bg-[#f7fafc]">
+        <!-- E-commerce Showcase -->
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-tertiary dark:bg-[#1f2937] rounded-2xl my-4 md:my-8">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">STS E-commerce Solutions in Action</h2>
-                <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    See how businesses are transforming with our platform
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-6 md:mb-8 break-word dark:text-primary" data-aos="fade-up">
+                    E-commerce Solutions in Thoothukudi
+                </h2>
+                <p class="text-center text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] max-w-3xl mx-auto mb-6 md:mb-8 break-word" data-aos="fade-up" data-aos-delay="100">
+                    As a leading e-commerce development company in Thoothukudi, Tamil Nadu, we provide comprehensive online store solutions including custom e-commerce platforms, payment gateway integration, inventory management, and mobile-responsive design.
                 </p>
                 
-                <div class="photo-gallery">
-                    <div class="photo-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="photo-image-container">
-                            <img src="Ecommerce-software-solutions-thoothukudi-tamilnadu-india.png" alt="E-commerce Dashboard IT companies in Tuticorin,Tamilnadu,India">
-                        </div>
-                        <div class="photo-caption">
-                            <h3>Products</h3>
-                            <p>Intuitive interface for managing products analytics</p>
+                <div class="square-tiles-container">
+                    <!-- Online Store Development -->
+                    <div class="square-tile card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Online Store Development Thoothukudi" class="tile-img">
+                        <div class="tile-content">
+                            <h3 class="text-lg md:text-xl font-bold text-primary mb-2 break-word dark:text-primary">Online Store Development</h3>
+                            <p class="text-sm md:text-base text-gray-600 dark:text-[#E0E0E0] break-word">Custom e-commerce websites built from scratch for businesses in Thoothukudi, Tamil Nadu.</p>
                         </div>
                     </div>
                     
-                    <div class="photo-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="photo-image-container">
-                            <img src="kalpaka organics.png" alt="Mobile Shopping">
+                    <!-- Payment Gateway Integration -->
+                    <div class="square-tile card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Payment Gateway Integration Thoothukudi" class="tile-img">
+                        <div class="tile-content">
+                            <h3 class="text-lg md:text-xl font-bold text-primary mb-2 break-word dark:text-primary">Payment Gateway Integration</h3>
+                            <p class="text-sm md:text-base text-gray-600 dark:text-[#E0E0E0] break-word">Secure payment processing with multiple payment options for Tamil Nadu customers.</p>
                         </div>
-                        <div class="photo-caption">
-                            <h3>Mobile-Optimized</h3>
-                            <p>Seamless shopping experience on all devices</p>
+                    </div>
+                    
+                    <!-- Inventory Management -->
+                    <div class="square-tile card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Inventory Management System Thoothukudi" class="tile-img">
+                        <div class="tile-content">
+                            <h3 class="text-lg md:text-xl font-bold text-primary mb-2 break-word dark:text-primary">Inventory Management</h3>
+                            <p class="text-sm md:text-base text-gray-600 dark:text-[#E0E0E0] break-word">Real-time stock tracking and management system for e-commerce businesses.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile E-commerce -->
+                    <div class="square-tile card" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mobile E-commerce Development Thoothukudi" class="tile-img">
+                        <div class="tile-content">
+                            <h3 class="text-lg md:text-xl font-bold text-primary mb-2 break-word dark:text-primary">Mobile E-commerce</h3>
+                            <p class="text-sm md:text-base text-gray-600 dark:text-[#E0E0E0] break-word">Mobile-responsive designs optimized for shopping on smartphones and tablets.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-      <section id="pricing" class="py-20 px-4 bg-[#f7fafc]">
-    <div class="container mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">Simple, Transparent Pricing</h2>
-        <p class="text-xl text-gray-600 text-center mb-16" data-aos="fade-up">Choose the perfect plan for your e-commerce needs</p>
-        
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <!-- Starter Plan -->
-            <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-center mb-8">
-                    <div class="bg-[#f7fafc] p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i class="bi bi-cart text-[#16abe7] text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#314495] mb-2">Starter</h3>
-                    <div class="flex justify-center items-baseline">
-                        <span class="text-4xl font-bold">₹999</span>
-                        <span class="text-gray-500 ml-2">/month</span>
-                    </div>
-                </div>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Up to 100 products</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Basic store templates</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Standard payment processing</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Email support</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Basic analytics</span>
-                    </li>
-                </ul>
-                <button class="w-full bg-[#314495] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#2c5282] transition-colors">
-                    Get Started
-                </button>
-            </div>
 
-            <!-- Business Plan -->
-            <div class="card bg-white p-8 rounded-xl border-2 border-[#16abe7] shadow-lg relative" data-aos="fade-up" data-aos-delay="200">
-                <div class="absolute top-0 right-0 bg-[#16abe7] text-white px-4 py-1 rounded-bl-lg rounded-tr-lg font-semibold">
-                    Most Popular
-                </div>
-                <div class="text-center mb-8">
-                    <div class="bg-[#f7fafc] p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i class="bi bi-graph-up text-[#16abe7] text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#314495] mb-2">Business</h3>
-                    <div class="flex justify-center items-baseline">
-                        <span class="text-4xl font-bold">₹1,999</span>
-                        <span class="text-gray-500 ml-2">/month</span>
-                    </div>
-                </div>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Up to 1000 products</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Custom store design</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Advanced payment processing</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Priority email & chat support</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Inventory management</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Advanced analytics</span>
-                    </li>
-                </ul>
-                <button class="w-full bg-[#16abe7] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1499d6] transition-colors">
-                    Get Started
-                </button>
-            </div>
-
-            <!-- Enterprise Plan -->
-            <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-center mb-8">
-                    <div class="bg-[#f7fafc] p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i class="bi bi-building text-[#16abe7] text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#314495] mb-2">Enterprise</h3>
-                    <div class="flex justify-center items-baseline">
-                        <span class="text-4xl font-bold">₹2,999</span>
-                        <span class="text-gray-500 ml-2">/month</span>
-                    </div>
-                </div>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Unlimited products</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Fully customized design</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Multi-channel selling</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">24/7 phone support</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Dedicated account manager</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">Custom integrations</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bi bi-check-circle-fill text-[#16abe7] text-xl mr-3"></i>
-                        <span class="text-gray-700">AI-powered analytics</span>
-                    </li>
-                </ul>
-                <button class="w-full bg-[#314495] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#2c5282] transition-colors">
-                    Get Started
-                </button>
-            </div>
-        </div>
-
-        <!-- Annual Pricing Option -->
-        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
-            <p class="text-lg text-gray-600">
-                <strong>Save 20%</strong> with annual billing - 
-                <span class="text-[#314495] font-semibold">₹12,799</span> / month (Starter) • 
-                <span class="text-[#314495] font-semibold">₹23,999</span> / month (Business) • 
-                <span class="text-[#314495] font-semibold">₹39,999</span> / month (Enterprise)
-            </p>
-        </div>
-    </div>
-</section>
-        <!-- Features Section -->
-        <section id="Kalpaka Organics" class="py-20 px-4 bg-white">
+        <!-- Platform Showcase -->
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-white dark:bg-[#1f2937] rounded-2xl my-4 md:my-8">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">Powerful E-commerce Features</h2>
-                <p class="text-xl text-gray-600 text-center mb-16" data-aos="fade-up">Everything you need to build and grow your online store</p>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-6 md:mb-8 break-word dark:text-primary" data-aos="fade-up">
+                    STS E-commerce Platform in Action
+                </h2>
+                <p class="text-center text-base md:text-lg text-gray-600 dark:text-[#E0E0E0] max-w-2xl mx-auto mb-8 md:mb-12 break-word" data-aos="fade-up" data-aos-delay="100">
+                    See how businesses in Thoothukudi and across Tamil Nadu are transforming with our professional e-commerce platform
+                </p>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-[#e8f2fc] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-cart-check text-[#314495] text-2xl"></i>
+                <div class="photo-gallery">
+                    <div class="photo-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="photo-image-container">
+                            <img src="Ecommerce-software-solutions-thoothukudi-tamilnadu-india.png" alt="E-commerce Dashboard for Online Store Management - Samudhra Tech Solutions Thoothukudi">
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Easy Product Management</h3>
-                        <p class="text-gray-600">Add, edit, and organize products with our intuitive dashboard.</p>
+                        <div class="photo-caption">
+                            <h3 class="text-lg md:text-xl font-bold mb-2 break-word">Advanced Product Management</h3>
+                            <p class="text-sm md:text-base break-word">Intuitive dashboard for managing products, categories, and inventory for Tamil Nadu businesses</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="photo-image-container">
+                            <img src="kalpaka organics.png" alt="Mobile-Optimized E-commerce Shopping Experience - Thoothukudi E-commerce Development">
+                        </div>
+                        <div class="photo-caption">
+                            <h3 class="text-lg md:text-xl font-bold mb-2 break-word">Mobile-Optimized Shopping</h3>
+                            <p class="text-sm md:text-base break-word">Seamless shopping experience on all devices with responsive design for Tamil Nadu customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-8 md:py-20 px-2 md:px-4 bg-tertiary dark:bg-[#1f2937] rounded-2xl my-4 md:my-8">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-6 md:mb-8 break-word dark:text-primary" data-aos="fade-up">
+                    Simple, Transparent E-commerce Pricing
+                </h2>
+                <p class="text-center text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] max-w-2xl mx-auto mb-8 md:mb-12 break-word" data-aos="fade-up" data-aos-delay="100">
+                    Choose the perfect plan for your online store development needs in Thoothukudi
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+                    <!-- Starter Plan -->
+                    <div class="pricing-card card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-center mb-6 md:mb-8">
+                            <div class="bg-tertiary p-4 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4">
+                                <i class="bi bi-cart text-primary text-2xl md:text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg md:text-2xl font-bold text-primary mb-2 break-word">Starter Store</h3>
+                            <div class="flex justify-center items-baseline">
+                                <span class="text-3xl md:text-4xl font-bold break-word">₹999</span>
+                                <span class="text-gray-500 ml-2 break-word">/month</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 break-word">Perfect for small businesses in Thoothukudi</p>
+                        </div>
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Up to 100 products</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Basic store templates</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Standard payment processing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Email support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Basic analytics</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/917339470191?text=Hi%20Samudhra%20Tech%20Solutions,%20I'm%20interested%20in%20Starter%20E-commerce%20plan%20(₹999/month)" 
+                           class="block w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-secondary transition-colors text-center break-word">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Business Plan -->
+                    <div class="pricing-card card popular relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="text-center mb-6 md:mb-8">
+                            <div class="bg-tertiary p-4 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4">
+                                <i class="bi bi-graph-up text-primary text-2xl md:text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg md:text-2xl font-bold text-primary mb-2 break-word">Business Store</h3>
+                            <div class="flex justify-center items-baseline">
+                                <span class="text-3xl md:text-4xl font-bold break-word">₹1,999</span>
+                                <span class="text-gray-500 ml-2 break-word">/month</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 break-word">Ideal for growing businesses in Tamil Nadu</p>
+                        </div>
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Up to 1000 products</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Custom store design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Advanced payment processing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Priority email & chat support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Inventory management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Advanced analytics</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/917339470191?text=Hi%20Samudhra%20Tech%20Solutions,%20I'm%20interested%20in%20Business%20E-commerce%20plan%20(₹1,999/month)" 
+                           class="block w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary transition-colors text-center break-word">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-center mb-6 md:mb-8">
+                            <div class="bg-tertiary p-4 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4">
+                                <i class="bi bi-building text-primary text-2xl md:text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg md:text-2xl font-bold text-primary mb-2 break-word">Enterprise Store</h3>
+                            <div class="flex justify-center items-baseline">
+                                <span class="text-3xl md:text-4xl font-bold break-word">₹2,999</span>
+                                <span class="text-gray-500 ml-2 break-word">/month</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 break-word">For large enterprises across Tamil Nadu</p>
+                        </div>
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Unlimited products</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Fully customized design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Multi-channel selling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">24/7 phone support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Dedicated account manager</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">Custom integrations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-secondary text-lg md:text-xl mr-3"></i>
+                                <span class="text-gray-700 dark:text-[#E0E0E0] text-sm md:text-base break-word">AI-powered analytics</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/917339470191?text=Hi%20Samudhra%20Tech%20Solutions,%20I'm%20interested%20in%20Enterprise%20E-commerce%20plan%20(₹2,999/month)" 
+                           class="block w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-secondary transition-colors text-center break-word">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Annual Pricing Option -->
+                <div class="text-center mt-8 md:mt-12" data-aos="fade-up" data-aos-delay="500">
+                    <p class="text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] break-word">
+                        <strong>Save 20%</strong> with annual billing for businesses in Thoothukudi
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-8 md:py-20 px-2 md:px-4 bg-white dark:bg-[#1f2937] rounded-2xl my-4 md:my-8">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-6 md:mb-8 break-word dark:text-primary" data-aos="fade-up">
+                    Powerful E-commerce Features for Tamil Nadu Businesses
+                </h2>
+                <p class="text-center text-base md:text-lg text-gray-600 dark:text-[#E0E0E0] max-w-3xl mx-auto mb-8 md:mb-12 break-word" data-aos="fade-up" data-aos-delay="100">
+                    Everything you need to build and grow your online store in Thoothukudi
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="card bg-white dark:bg-[#2d3748] p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-tertiary dark:bg-[#374151] p-4 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-cart-check text-primary text-xl md:text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Easy Product Management</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Add, edit, and organize products with our intuitive dashboard for Tamil Nadu businesses.</p>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-                        <div class="bg-[#e8f2fc] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-credit-card text-[#314495] text-2xl"></i>
+                    <div class="card bg-white dark:bg-[#2d3748] p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-tertiary dark:bg-[#374151] p-4 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-credit-card text-primary text-xl md:text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Multiple Payment Options</h3>
-                        <p class="text-gray-600">Accept payments via credit cards, digital wallets, and more.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Multiple Payment Options</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Accept payments via credit cards, UPI, digital wallets, and more for Thoothukudi customers.</p>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                        <div class="bg-[#e8f2fc] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-truck text-[#314495] text-2xl"></i>
+                    <div class="card bg-white dark:bg-[#2d3748] p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-tertiary dark:bg-[#374151] p-4 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-truck text-primary text-xl md:text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Shipping & Logistics</h3>
-                        <p class="text-gray-600">Integrated shipping solutions with real-time tracking.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Shipping & Logistics</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Integrated shipping solutions with real-time tracking for Tamil Nadu delivery networks.</p>
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="400">
-                        <div class="bg-[#e8f2fc] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-graph-up text-[#314495] text-2xl"></i>
+                    <div class="card bg-white dark:bg-[#2d3748] p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                        <div class="bg-tertiary dark:bg-[#374151] p-4 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-graph-up text-primary text-xl md:text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Sales Analytics</h3>
-                        <p class="text-gray-600">Track performance with detailed reports and insights.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Sales Analytics</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Track performance with detailed reports and insights for Tamil Nadu market analysis.</p>
                     </div>
 
                     <!-- Feature 5 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="500">
-                        <div class="bg-[#e8f2fc] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-shield-check text-[#314495] text-2xl"></i>
+                    <div class="card bg-white dark:bg-[#2d3748] p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm" data-aos="fade-up" data-aos-delay="600">
+                        <div class="bg-tertiary dark:bg-[#374151] p-4 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-shield-check text-primary text-xl md:text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Secure & Reliable</h3>
-                        <p class="text-gray-600">Bank-level security with 99.9% uptime guarantee.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Secure & Reliable</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Bank-level security with 99.9% uptime guarantee for Thoothukudi online stores.</p>
                     </div>
 
                     <!-- Feature 6 -->
-                    <div class="card bg-white p-8 rounded-xl border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="600">
-                        <div class="bg-[#e8f2fc] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                            <i class="bi bi-phone text-[#314495] text-2xl"></i>
+                    <div class="card bg-white dark:bg-[#2d3748] p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm" data-aos="fade-up" data-aos-delay="700">
+                        <div class="bg-tertiary dark:bg-[#374151] p-4 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6">
+                            <i class="bi bi-phone text-primary text-xl md:text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#314495] mb-4">Mobile Commerce</h3>
-                        <p class="text-gray-600">Optimized for mobile shopping with PWA capabilities.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-primary mb-4 dark:text-primary break-word">Mobile Commerce</h3>
+                        <p class="text-gray-600 dark:text-[#E0E0E0] text-sm md:text-base break-word">Optimized for mobile shopping with PWA capabilities for Tamil Nadu smartphone users.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section class="py-20 px-4 bg-[#f7fafc]">
+        <section class="py-8 md:py-20 px-2 md:px-4 bg-tertiary dark:bg-[#1f2937] rounded-2xl my-4 md:my-8">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#314495] text-center mb-4" data-aos="fade-up">What Our Clients Say</h2>
-                <p class="text-xl text-gray-600 text-center mb-16" data-aos="fade-up">Hear from businesses that transformed their online presence with our platform</p>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-6 md:mb-8 break-word dark:text-primary" data-aos="fade-up">
+                    What Our Thoothukudi Clients Say
+                </h2>
+                <p class="text-center text-base md:text-lg text-gray-800 dark:text-[#E0E0E0] max-w-3xl mx-auto mb-8 md:mb-12 break-word" data-aos="fade-up" data-aos-delay="100">
+                    Hear from Tamil Nadu businesses that transformed their online presence with our platform
+                </p>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Testimonial 1 -->
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="testimonial-text">
-                            The platform helped us launch our online store in just two weeks. Sales increased by 40% in the first month alone!
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-text text-sm md:text-base break-word">
+                            The platform helped us launch our online store in Thoothukudi in just two weeks. Sales increased by 40% in the first month alone!
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">RS</div>
                             <div class="author-info">
-                                <h4>Mr.Senthil</h4>
-                                <p></p>
+                                <h4 class="font-bold text-primary dark:text-primary text-sm md:text-base break-word">Mr. Senthil</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm break-word">Retail Store Owner, Thoothukudi</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Testimonial 2 -->
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="testimonial-text">
-                            Customer support is exceptional. They helped us customize our store exactly how we wanted it.
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-text text-sm md:text-base break-word">
+                            Customer support is exceptional. They helped us customize our store exactly how we wanted it for our Tamil Nadu customers.
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">PK</div>
                             <div class="author-info">
-                                <h4>Mrs.Suganya Palani</h4>
-                                <p></p>
+                                <h4 class="font-bold text-primary dark:text-primary text-sm md:text-base break-word">Mrs. Suganya Palani</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm break-word">Fashion Boutique, Thoothukudi</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Testimonial 3 -->
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="testimonial-text">
-                            The analytics dashboard gives us insights we never had before. We've optimized our inventory based on the data.
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="testimonial-text text-sm md:text-base break-word">
+                            The analytics dashboard gives us insights we never had before. We've optimized our inventory based on the Tamil Nadu market data.
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">AS</div>
                             <div class="author-info">
-                                <h4>Mr.Kathir</h4>
-                                <p></p>
+                                <h4 class="font-bold text-primary dark:text-primary text-sm md:text-base break-word">Mr. Kathir</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm break-word">Electronics Retailer, Tamil Nadu</p>
                             </div>
                         </div>
                     </div>
@@ -755,62 +1430,413 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section id="contact" class="py-20 px-4 bg-gradient-to-r from-[#2c5282] to-[#314495] text-white">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Launch Your Online Store?</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="200">
-                    Start selling online today with our powerful e-commerce platform
+        <!-- Integration with Other Services -->
+        <section class="py-8 md:py-12 bg-white dark:bg-[#1f2937] rounded-2xl p-4 md:p-6 mb-4 md:mb-8 mx-2 md:mx-0">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-primary text-center mb-4 md:mb-6 break-word dark:text-primary">Seamlessly Integrates with Our Other Services</h2>
+            <p class="text-center text-base md:text-lg text-gray-600 dark:text-[#E0E0E0] mb-4 md:mb-6 max-w-3xl mx-auto break-word">
+                As a complete IT solutions provider in Thoothukudi, we ensure your e-commerce platform works perfectly with all your business systems.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
+                <a href="Billing software IT Tech company in thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-tertiary dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow card">
+                    <i class="bi bi-cash-stack text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary text-sm md:text-base break-word dark:text-primary">Billing Software</p>
+                </a>
+                <a href="Website developement IT company in thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-tertiary dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow card">
+                    <i class="bi bi-globe text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary text-sm md:text-base break-word dark:text-primary">Web Development</p>
+                </a>
+                <a href="CRM  IT company thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-tertiary dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow card">
+                    <i class="bi bi-people-fill text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary text-sm md:text-base break-word dark:text-primary">CRM</p>
+                </a>
+                <a href="Digital Marketing IT company thoothukudi tamilnadu india.html" class="block text-center p-3 md:p-4 bg-tertiary dark:bg-[#2d3748] rounded-lg hover:shadow-lg transition-shadow card">
+                    <i class="bi bi-megaphone text-secondary text-xl md:text-2xl lg:text-3xl mb-2"></i>
+                    <p class="font-semibold text-primary text-sm md:text-base break-word dark:text-primary">Digital Marketing</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 md:py-20 px-4 bg-primary text-white dark:bg-[#1f2937]">
+            <div class="container mx-auto">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12 dark:text-primary break-word">Ready to Launch Your Online Store in Thoothukudi?</h2>
+                <p class="text-center text-base md:text-lg text-tertiary dark:text-secondary max-w-3xl mx-auto mb-8 md:mb-12 break-word" data-aos="fade-up" data-aos-delay="200">
+                    Start selling online today with our powerful e-commerce platform designed for Tamil Nadu businesses
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#pricing" class="bg-white text-[#314495] py-3 px-8 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                        View Plans
-                    </a>
-                    <a href="mailto:samudhratechsolutions@gmail.com" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-[#314495] transition-colors">
-                        Contact Us
-                    </a>
+                
+                <div class="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
+                    <!-- Contact Info -->
+                    <div class="lg:w-1/2 space-y-6">
+                        <!-- Address -->
+                        <div class="flex items-start">
+                            <i class="bi bi-geo-alt-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">E-commerce Office in Thoothukudi</h3>
+                                <p class="text-tertiary dark:text-[#E0E0E0] text-sm md:text-base break-word">4/133X, Muthammal Colony, 3rd Street, Tuticorin-628002, Tamilnadu</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-start">
+                            <i class="bi bi-telephone-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Call Our E-commerce Team</h3>
+                                <a href="tel:+917339470191" class="text-tertiary hover:text-secondary transition-colors text-base md:text-lg font-bold dark:text-[#E0E0E0] dark:hover:text-secondary break-word">+91 73394 70191</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <i class="bi bi-envelope-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Email for E-commerce Quotes</h3>
+                                <a href="mailto:samudhratechsolutions@gmail.com" class="text-tertiary hover:text-secondary transition-colors dark:text-[#E0E0E0] dark:hover:text-secondary text-sm md:text-base break-word">samudhratechsolutions@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="flex items-start">
+                            <i class="bi bi-clock-fill text-secondary text-xl md:text-2xl mr-3 md:mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 break-word">Business Hours</h3>
+                                <p class="text-tertiary dark:text-[#E0E0E0] text-sm md:text-base break-word">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                                <p class="text-tertiary dark:text-[#E0E0E0] text-sm md:text-base break-word">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="lg:w-1/2 mt-6 md:mt-0">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 break-word">Connect With Our E-commerce Team</h3>
+                        <p class="text-tertiary dark:text-[#E0E0E0] mb-4 md:mb-6 text-sm md:text-base break-word">Follow us for e-commerce tips, platform updates, and business insights.</p>
+                        <div class="flex space-x-4 md:space-x-6 mb-6 md:mb-8">
+                            <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326" class="text-2xl md:text-3xl hover:text-secondary transition-colors" aria-label="Connect on LinkedIn for e-commerce services">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/samudhra_tuty" class="text-2xl md:text-3xl hover:text-secondary transition-colors" aria-label="Follow on Instagram for e-commerce projects">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="mt-4 md:mt-6">
+                            <a href="tel:+917339470191" class="inline-block bg-secondary text-white py-3 px-4 md:px-6 lg:px-8 rounded-full font-semibold text-base md:text-lg hover:bg-white hover:text-primary transition-colors w-full md:w-auto text-center">
+                                <i class="fas fa-phone mr-2"></i> Call for Free E-commerce Consultation
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/917339470191?text=Hi%20Samudhra%20Tech%20Solutions,%20I'm%20interested%20in%20your%20e-commerce%20solutions%20in%20Thoothukudi" target="_blank" class="fab whatsapp animate-bounce" aria-label="Chat on WhatsApp for e-commerce solutions">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="tooltip">Chat about e-commerce</span>
+        </a>
+
+        <!-- Scroll to Top -->
+        <a href="#" class="fab top" aria-label="Scroll to Top" id="scrollToTop">
+            <i class="fa-solid fa-arrow-up"></i>
+            <span class="tooltip">Back to Top</span>
+        </a>
+    </div>
+
     <!-- Footer -->
-     <footer id="contactSection">
-        <div class="container">
-            <div class="footer-contact">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:samudhratechsolutions@gmail.com">samudhratechsolutions@gmail.com</a>
+    <footer class="bg-white shadow-sm text-primary py-6 md:py-8 mt-6 md:mt-12 dark:bg-[#1f2937] dark:text-[#E0E0E0]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6 md:mb-8">
+                <h4 class="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4 break-word dark:text-primary">Samudhra Tech Solutions</h4>
+                <p class="text-sm md:text-base text-gray-700 dark:text-[#E0E0E0] mb-4 break-word">
+                    Professional e-commerce solutions in Thoothukudi, Tamil Nadu. Online store development, payment gateway integration, inventory management, and mobile-responsive e-commerce platforms.
+                </p>
+                <p class="text-sm md:text-base text-gray-700 dark:text-[#E0E0E0] break-word">
+                    <strong>E-commerce Development Company in Thoothukudi, Tamil Nadu</strong>
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-300 dark:border-gray-700 pt-6">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] break-word">Phone: <a href="tel:+917339470191" class="hover:text-secondary dark:hover:text-secondary">+91 73394 70191</a></p>
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] break-word">Email: <a href="mailto:samudhratechsolutions@gmail.com" class="hover:text-secondary dark:hover:text-secondary">samudhratechsolutions@gmail.com</a></p>
                 </div>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0YdltgD%2FSdmBFo9XCdbhkA%3D%3D">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/samudhra_tuty?igsh=MWN0cW90dm8wMTBjMw==">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+917339470191">+91 73394 70191</a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Thoothukudi, Tamilnadu</span>
+                
+                 <div class="text-center">
+                    <!-- Social Media Links -->
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326" target="_blank" class="text-2xl hover:text-secondary transition-colors dark:hover:text-secondary" aria-label="Connect on LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/samudhra_tuty" target="_blank" class="text-2xl hover:text-secondary transition-colors dark:hover:text-secondary" aria-label="Follow on Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/917339470191" target="_blank" class="text-2xl hover:text-secondary transition-colors dark:hover:text-secondary" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] break-word">&copy; 2025 Samudhra Tech Solutions. All rights reserved.</p>
+                    <p class="text-sm text-gray-700 dark:text-[#E0E0E0] mt-1 break-word">Thoothukudi, Tamil Nadu, India</p>
                 </div>
             </div>
-
-            <p>© 2025 Samudhra Tech Solutions. All rights reserved.</p>
+            
+            <!-- SEO Footer Text -->
+            <div class="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-300 dark:border-gray-700 sr-only">
+                <p class="break-word">
+                    <strong>SEO Keywords:</strong>
+                    E-commerce solutions Thoothukudi, online store development Tamil Nadu, e-commerce website development,
+                    Payment gateway integration, inventory management system, mobile e-commerce development,
+                    Responsive online store design, e-commerce company Thoothukudi, Shopify development Tamil Nadu,
+                    Magento development Thoothukudi, WooCommerce development Tamil Nadu, online business setup Thoothukudi,
+                    Digital store creation, Tamil Nadu e-commerce platform, Thoothukudi online shopping website,
+                    E-commerce maintenance services, multi-vendor marketplace development, secure payment processing,
+                    Mobile-responsive e-commerce, Tamil Nadu business e-commerce solutions.
+                </p>
+            </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+        
+        // === THEME SYSTEM INTEGRATION ===
+        // Theme synchronization with index page and other pages
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get current theme from localStorage or system preference
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // Apply theme based on saved preference or system
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-sun-fill');
+                    themeIcon.classList.add('bi-moon-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-sun-fill');
+                    mobileThemeIcon.classList.add('bi-moon-fill');
+                }
+            } else {
+                document.documentElement.classList.remove('dark');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-moon-fill');
+                    themeIcon.classList.add('bi-sun-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-moon-fill');
+                    mobileThemeIcon.classList.add('bi-sun-fill');
+                }
+            }
+        });
+
+        // Listen for theme changes from other pages (like index page)
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'theme') {
+                if (e.newValue === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    // Update desktop theme icon
+                    const themeIcon = document.getElementById('theme-icon');
+                    if (themeIcon) {
+                        themeIcon.classList.remove('bi-sun-fill');
+                        themeIcon.classList.add('bi-moon-fill');
+                    }
+                    // Update mobile theme icon
+                    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                    if (mobileThemeIcon) {
+                        mobileThemeIcon.classList.remove('bi-sun-fill');
+                        mobileThemeIcon.classList.add('bi-moon-fill');
+                    }
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    // Update desktop theme icon
+                    const themeIcon = document.getElementById('theme-icon');
+                    if (themeIcon) {
+                        themeIcon.classList.remove('bi-moon-fill');
+                        themeIcon.classList.add('bi-sun-fill');
+                    }
+                    // Update mobile theme icon
+                    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                    if (mobileThemeIcon) {
+                        mobileThemeIcon.classList.remove('bi-moon-fill');
+                        mobileThemeIcon.classList.add('bi-sun-fill');
+                    }
+                }
+            }
+        });
+
+        // Theme toggle button functionality (synchronized with index page)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+        const toggleTheme = () => {
+            const isCurrentlyDark = document.documentElement.classList.contains('dark');
+            
+            if (isCurrentlyDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-moon-fill');
+                    themeIcon.classList.add('bi-sun-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-moon-fill');
+                    mobileThemeIcon.classList.add('bi-sun-fill');
+                }
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                // Update desktop theme icon
+                const themeIcon = document.getElementById('theme-icon');
+                if (themeIcon) {
+                    themeIcon.classList.remove('bi-sun-fill');
+                    themeIcon.classList.add('bi-moon-fill');
+                }
+                // Update mobile theme icon
+                const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+                if (mobileThemeIcon) {
+                    mobileThemeIcon.classList.remove('bi-sun-fill');
+                    mobileThemeIcon.classList.add('bi-moon-fill');
+                }
+            }
+            
+            // Dispatch storage event to sync across tabs/pages (including index page)
+            window.dispatchEvent(new StorageEvent('storage', {
+                key: 'theme',
+                newValue: document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+            }));
+        };
+
+        // Add event listeners to theme toggle buttons
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+        }
+
+        // === MOBILE MENU FUNCTIONALITY ===
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle mobile menu
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Close menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Close mobile menu on window resize (if resized to desktop)
+        window.addEventListener('resize', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // === SMOOTH SCROLLING ===
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // === SCROLL TO TOP FUNCTIONALITY ===
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scrollToTopBtn) {
+            scrollToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollToTop();
+            });
+        }
+
+        // Show/hide scroll to top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const topButton = document.querySelector('.fab.top');
+            if (topButton) {
+                if (window.scrollY > 300) {
+                    topButton.style.display = 'flex';
+                } else {
+                    topButton.style.display = 'none';
+                }
+            }
+        });
+
+        // Initialize - hide top button on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const topButton = document.querySelector('.fab.top');
+            if (topButton) {
+                topButton.style.display = 'none';
+            }
+            
+            // Add animation delay for better mobile performance
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Mobile-specific enhancements
+        if (window.innerWidth <= 768) {
+            // Prevent zoom on double-tap
+            document.addEventListener('touchstart', function(event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            }, { passive: false });
+        }
     </script>
 </body>
 </html>
-
