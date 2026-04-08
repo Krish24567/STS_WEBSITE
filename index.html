@@ -499,7 +499,7 @@
                 style="max-width: 1200px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; text-align: center;">
                 <span class="trial-badge">🚀 NOW LAUNCHING</span>
                 <p style="color: #fff; font-weight: 600; font-size: 0.95rem; margin: 0; line-height: 1.4;">
-                    🎉 Our <strong style="color: #FFD700;">Smart ERP Billing Software</strong> is now live! &nbsp;|&nbsp;
+                    🎉 Our <strong style="color: #FFD700;">Smart Billing Software</strong> is now live! &nbsp;|&nbsp;
                     Try it FREE for <strong style="color: #FFD700;">7 Days</strong> — No Credit Card Required!
                 </p>
                 <a href="https://easyledger.free.nf/?i=1" target="_blank"
@@ -772,84 +772,110 @@
 
 
         <!-- ===== BILLING SOFTWARE LAUNCH PROMO SECTION ===== -->
-        <section id="billing-launch" class="py-20 px-4"
-            style="background: linear-gradient(135deg, #0f1e5c 0%, #1a3a8f 40%, #16abe7 100%); position: relative; overflow: hidden;">
+        <style>
+            /* Billing Launch Section - Light Mode */
+            #billing-launch {
+                background: linear-gradient(135deg, #0f1e5c 0%, #1a3a8f 40%, #16abe7 100%);
+                position: relative;
+                overflow: hidden;
+            }
+            /* Billing Launch Section - Dark Mode Override */
+            .dark #billing-launch {
+                background: linear-gradient(135deg, #0a0f1e 0%, #0d1a3a 50%, #0a2a4a 100%);
+            }
+            .billing-card {
+                background: rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 16px;
+                padding: 24px 20px;
+                text-align: center;
+                border: 1px solid rgba(255,255,255,0.15);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .dark .billing-card {
+                background: rgba(255,255,255,0.05);
+                border: 1px solid rgba(255,215,0,0.2);
+            }
+            .billing-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            }
+            .billing-img-wrapper {
+                position: relative;
+            }
+            .billing-img-wrapper::before {
+                content: '';
+                position: absolute;
+                inset: -8px;
+                border-radius: 20px;
+                background: linear-gradient(135deg, #FFD700, #16abe7);
+                opacity: 0.25;
+                filter: blur(16px);
+                z-index: 0;
+            }
+            .billing-img-wrapper img {
+                position: relative;
+                z-index: 1;
+                border-radius: 14px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                transition: transform 0.4s ease;
+            }
+            .billing-img-wrapper img:hover {
+                transform: scale(1.03);
+            }
+            .dark .billing-img-wrapper::before {
+                opacity: 0.35;
+            }
+        </style>
+        <section id="billing-launch" class="py-20 px-4">
             <!-- Decorative circles -->
-            <div
-                style="position:absolute; top:-60px; right:-60px; width:250px; height:250px; border-radius:50%; background:rgba(255,255,255,0.05);">
-            </div>
-            <div
-                style="position:absolute; bottom:-80px; left:-40px; width:300px; height:300px; border-radius:50%; background:rgba(255,215,0,0.07);">
-            </div>
+            <div style="position:absolute; top:-60px; right:-60px; width:300px; height:300px; border-radius:50%; background:rgba(255,255,255,0.04); pointer-events:none;"></div>
+            <div style="position:absolute; bottom:-80px; left:-40px; width:350px; height:350px; border-radius:50%; background:rgba(255,215,0,0.06); pointer-events:none;"></div>
+            <div style="position:absolute; top:50%; left:5%; width:180px; height:180px; border-radius:50%; background:rgba(22,171,231,0.08); pointer-events:none;"></div>
 
             <div class="container mx-auto" style="position:relative; z-index:2;">
                 <!-- Launch Badge -->
                 <div style="text-align:center; margin-bottom:16px;" data-aos="fade-down">
-                    <span
-                        style="background:#FFD700; color:#1a1a1a; font-weight:800; font-size:0.8rem; padding:5px 18px; border-radius:20px; letter-spacing:1px; text-transform:uppercase;">🚀
-                        Now Launching</span>
+                    <span style="background:#FFD700; color:#1a1a1a; font-weight:800; font-size:0.8rem; padding:5px 18px; border-radius:20px; letter-spacing:1px; text-transform:uppercase;">🚀 Now Launching</span>
                 </div>
 
-                <h2 style="color:#fff; text-align:center; font-size:clamp(1.8rem,4vw,3rem); font-weight:800; margin-bottom:12px; line-height:1.25;"
-                    data-aos="fade-up">
+                <h2 style="color:#fff; text-align:center; font-size:clamp(1.8rem,4vw,3rem); font-weight:800; margin-bottom:12px; line-height:1.25;" data-aos="fade-up">
                     Smart Billing Software — <span style="color:#FFD700;">7 Days Free Trial</span>
                 </h2>
-                <p style="color:rgba(255,255,255,0.8); text-align:center; font-size:1.1rem; max-width:650px; margin:0 auto 48px; line-height:1.7;"
-                    data-aos="fade-up" data-aos-delay="100">
-                    We are thrilled to introduce our all-in-one <strong style="color:#FFD700;">GST Billing &amp;
-                        Inventory Management Software</strong>.
-                    Experience the full power of the platform — completely free for 7 days. No credit card. No
-                    commitment.
+                <p style="color:rgba(255,255,255,0.8); text-align:center; font-size:1.1rem; max-width:650px; margin:0 auto 48px; line-height:1.7;" data-aos="fade-up" data-aos-delay="100">
+                    We are thrilled to introduce our all-in-one <strong style="color:#FFD700;">GST Billing &amp; Inventory Management Software</strong>.
+                    Experience the full power of the platform — completely free for 7 days. No credit card. No commitment.
                 </p>
 
                 <!-- Feature Cards -->
-                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; margin-bottom:48px;"
-                    data-aos="fade-up" data-aos-delay="150">
-                    <div style="background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius:16px; padding:24px 20px; text-align:center; border:1px solid rgba(255,255,255,0.15); transition:transform 0.3s;"
-                        onmouseover="this.style.transform='translateY(-6px)'"
-                        onmouseout="this.style.transform='translateY(0)'">
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; margin-bottom:48px;" data-aos="fade-up" data-aos-delay="150">
+                    <div class="billing-card">
                         <div style="font-size:2rem; margin-bottom:10px;">🧾</div>
-                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">GST Invoicing
-                        </h3>
-                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Create professional
-                            GST-compliant invoices in seconds.</p>
+                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">GST Invoicing</h3>
+                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Create professional GST-compliant invoices in seconds.</p>
                     </div>
-                    <div style="background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius:16px; padding:24px 20px; text-align:center; border:1px solid rgba(255,255,255,0.15); transition:transform 0.3s;"
-                        onmouseover="this.style.transform='translateY(-6px)'"
-                        onmouseout="this.style.transform='translateY(0)'">
+                    <div class="billing-card">
                         <div style="font-size:2rem; margin-bottom:10px;">📦</div>
-                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">Inventory
-                            Management</h3>
-                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Track stock levels,
-                            purchases &amp; sales in real time.</p>
+                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">Inventory Management</h3>
+                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Track stock levels, purchases &amp; sales in real time.</p>
                     </div>
-                    <div style="background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius:16px; padding:24px 20px; text-align:center; border:1px solid rgba(255,255,255,0.15); transition:transform 0.3s;"
-                        onmouseover="this.style.transform='translateY(-6px)'"
-                        onmouseout="this.style.transform='translateY(0)'">
+                    <div class="billing-card">
                         <div style="font-size:2rem; margin-bottom:10px;">📊</div>
-                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">Business Reports
-                        </h3>
-                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Instant profit, loss &amp;
-                            sales reports at your fingertips.</p>
+                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">Business Reports</h3>
+                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Instant profit, loss &amp; sales reports at your fingertips.</p>
                     </div>
-                    <div style="background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius:16px; padding:24px 20px; text-align:center; border:1px solid rgba(255,255,255,0.15); transition:transform 0.3s;"
-                        onmouseover="this.style.transform='translateY(-6px)'"
-                        onmouseout="this.style.transform='translateY(0)'">
+                    <div class="billing-card">
                         <div style="font-size:2rem; margin-bottom:10px;">☁️</div>
-                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">Cloud &amp;
-                            Secure</h3>
-                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Access your data anywhere,
-                            anytime — fully secured.</p>
+                        <h3 style="color:#FFD700; font-weight:700; margin-bottom:6px; font-size:1rem;">Cloud &amp; Secure</h3>
+                        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin:0;">Access your data anywhere, anytime — fully secured.</p>
                     </div>
                 </div>
 
-                <!-- Trial Countdown + CTA -->
+                <!-- Trial CTA -->
                 <div style="text-align:center;" data-aos="zoom-in" data-aos-delay="200">
-                    <div
-                        style="display:inline-flex; align-items:center; gap:12px; background:rgba(255,215,0,0.15); border:2px dashed #FFD700; border-radius:12px; padding:14px 28px; margin-bottom:28px; flex-wrap:wrap; justify-content:center;">
+                    <div style="display:inline-flex; align-items:center; gap:12px; background:rgba(255,215,0,0.12); border:2px dashed #FFD700; border-radius:12px; padding:14px 28px; margin-bottom:28px; flex-wrap:wrap; justify-content:center;">
                         <span style="font-size:1.5rem;">⏳</span>
-                        <span style="color:#FFD700; font-weight:700; font-size:1.05rem;">7-Day Free Demo Trial — Limited
-                            Slots Available!</span>
+                        <span style="color:#FFD700; font-weight:700; font-size:1.05rem;">7-Day Free Demo Trial — Limited Slots Available!</span>
                     </div>
                     <br>
                     <a href="https://easyledger.free.nf/?i=1" target="_blank"
@@ -858,8 +884,7 @@
                         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 24px rgba(255,215,0,0.35)';">
                         🎉 Start Your Free 7-Day Trial Now
                     </a>
-                    <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; margin-top:14px;">No credit card required
-                        &nbsp;•&nbsp; Cancel anytime &nbsp;•&nbsp; Full access</p>
+                    <p style="color:rgba(255,255,255,0.5); font-size:0.85rem; margin-top:14px;">No credit card required &nbsp;•&nbsp; Cancel anytime &nbsp;•&nbsp; Full access</p>
                 </div>
             </div>
         </section>
