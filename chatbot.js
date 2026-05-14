@@ -258,15 +258,15 @@ if (nameMatch) {
       return "I'd love to help you better. May I know your name?";
     }
     if (!this.notes.phone) {
-      return "To provide you with the best assistance, could you share your phone number?";
+      return "To provide you with the best assistance, could you please share your valid Mobile Number?";
     }
     if (!this.notes.email) {
-      return "What's your email address so we can send you detailed information?";
+      return "May I know your valid Email Address, so that I can send you detailed information?";
     }
     if (this.notes.name && this.notes.phone && this.notes.email && !this.notes.business) {
       this.showBusinessSuggestions();
       this.needsBusiness = true;
-      return `Great to meet you, ${this.notes.name}! 🚀 What's your business or project about?`;
+      return `Great to meet you, ${this.notes.name}! 🚀 What's your Business or Project about?`;
     }
     if (this.notes.business && !this.notes.service) {
       this.showServiceSuggestions();
