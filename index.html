@@ -293,8 +293,8 @@
 
         .floating-buttons {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            left: 30px;
             z-index: 1000;
             display: flex;
             flex-direction: column;
@@ -331,7 +331,7 @@
 
         .tooltip {
             position: absolute;
-            right: 70px;
+            left: 70px;
             background: #333;
             color: white;
             padding: 8px 12px;
@@ -1311,7 +1311,7 @@
                             real-world experience in web development.
                             Work with our expert team to build responsive, secure, and modern websites while
                             improving your technical and problem-solving skills.</p>
-                        <a  href="Internship IT company in thoothukudi tamilnadu india.html"
+                        <a href="Internship IT company in thoothukudi tamilnadu india.html"
                             class="inline-block bg-primary text-white py-2 px-4 rounded-full font-semibold hover:bg-secondary transition-colors text-sm mt-auto"
                             data-job-title="Internship Program">Apply Now</a>
                     </div>
@@ -2109,6 +2109,128 @@
         });
 
     </script>
+
+    <!-- Chatbot Integration -->
+    <link rel="stylesheet" href="chatbot.css">
+    <script defer src="chatbot.js"></script>
+
+    <!-- Chatbot HTML -->
+    <div class="chatbot-container animate-bounce">
+        <!--div class="chatbot-popup" id="chatbot-popup">
+            <span>👋 Hi! Need help with STS Services?</span>
+            <button class="popup-close" id="popup-close">&times;</button>
+        </div-->
+        <div class="chatbot-welcome" id="chatbot-popup">
+            <button class="welcome-close" id="popup-close">
+                &times;
+            </button>
+            <div class="welcome-card">
+                <p class="welcome-title">
+                    🌿 Welcome to STS Services ! 🌿
+                </p>
+                <p class="welcome-text">
+                    Hi there ! 👋 I'm your STS AI assistant.
+                    <br><br>
+                    I'm here to help you explore our services,
+                    answer your questions and guide you instantly.
+                </p>
+                <p class="welcome-question">
+                    ✨ How can I assist you today?
+                </p>
+            </div>
+            <div class="welcome-actions">
+                <button class="welcome-btn" id="welcome-sure" onclick="document.getElementById('chatbot-popup').style.display='none'; document.getElementById('chatbot-toggle').click(); setTimeout(() => { document.getElementById('chatbot-input').value='sure'; document.getElementById('chatbot-send').click(); }, 1100);">
+                    Sure, let's chat!
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-button" id="chatbot-toggle">
+            <i class="fas fa-robot"></i>
+        </button>
+
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <div style="display: flex; align-items: center;">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <div class="chatbot-title">STS AI Assistant</div>
+                        <div class="chatbot-status"><i class="bi bi-reception-4" style="color: rgb(125, 255, 125);"></i>
+                            Online</div>
+                    </div>
+                </div>
+                <div class="chatbot-controls">
+                    <button class="chatbot-minimize" id="chatbot-minimize" title="Minimize chat">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="chatbot-close" id="chatbot-close" title="Close chat">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+
+            <div class="chatbot-input-area" id="chatbot-input-area">
+                <div class="chatbot-input-container">
+                    <input type="text" class="chatbot-input" id="chatbot-input"
+                        placeholder="Ask me anything about STS...">
+                    <button class="chatbot-send" id="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chatbot-book-cta" id="chatbot-book-cta">
+                <button class="btn btn-primary" id="chatbook-whatsapp">Book on WhatsApp</button>
+            </div>
+
+            <div class="whatsapp-panel" id="whatsapp-panel">
+                <div class="notes-header">
+                    <h3>Booking Summary</h3>
+                    <button class="btn btn-secondary" id="whatsapp-close">×</button>
+                </div>
+                <div class="whatsapp-message" id="whatsapp-message"></div>
+                <div class="whatsapp-actions">
+                    <button class="btn btn-primary" id="book-whatsapp">Book on WhatsApp</button>
+                    <button class="btn btn-secondary" id="close-booking">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const popup = document.getElementById("chatbot-popup");
+    const closeBtn = document.getElementById("popup-close");
+    const chatbotWindow = document.getElementById("chatbot-window");
+    const chatbotToggle = document.getElementById("chatbot-toggle");
+
+    function isChatOpen() {
+        return chatbotWindow.classList.contains("active");
+    }
+    chatbotToggle.addEventListener("click", () => {
+        chatbotWindow.classList.toggle("active");
+
+    });
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+        setTimeout(() => {
+
+            if (!isChatOpen()) {
+                popup.style.display = "";
+            }
+
+        }, 15000);
+
+    });
+
+});
+
+</script>
 
 </html>

@@ -65,10 +65,10 @@
     </script>
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
 
     <!-- City-Based SEO Rendering -->
     <script>
@@ -114,7 +114,7 @@
                 description: 'Premium IT internship programs in Nagercoil with real-world training, expert mentorship, certification and placement support.',
                 keywords: 'Internship in Nagercoil, IT Internship Tamil Nadu, Full Stack Internship, Web Development Internship, Best Internship in Nagercoil'
             },
-            salem:{
+            salem: {
                 name: ' Salem',
                 state: 'Tamil Nadu',
                 phone: '+91 73394 70191',
@@ -122,7 +122,7 @@
                 description: 'Premium IT internship programs in Salem with real-world training, expert mentorship, certification and placement support.',
                 keywords: 'Internship in Salem, IT Internship Tamil Nadu, Full Stack Internship, Web Development Internship, Best Internship in Salem'
             },
-            ramanathapuram:{
+            ramanathapuram: {
                 name: ' Ramanathapuram',
                 state: 'Tamil Nadu',
                 phone: '+91 73394 70191',
@@ -130,7 +130,7 @@
                 description: 'Premium IT internship programs in Ramanathapuram with real-world training, expert mentorship, certification and placement support.',
                 keywords: 'Internship in Ramanathapuram, IT Internship Tamil Nadu, Full Stack Internship, Web Development Internship, Best Internship in Ramanathapuram'
             },
-            viruthunagar:{
+            viruthunagar: {
                 name: ' Viruthunagar',
                 state: 'Tamil Nadu',
                 phone: '+91 73394 70191',
@@ -138,7 +138,7 @@
                 description: 'Premium IT internship programs in Viruthunagar with real-world training, expert mentorship, certification and placement support.',
                 keywords: 'Internship in Viruthunagar, IT Internship Tamil Nadu, Full Stack Internship, Web Development Internship, Best Internship in Viruthunagar'
             },
-            kovilpatti:{
+            kovilpatti: {
                 name: ' Kovilpatti',
                 state: 'Tamil Nadu',
                 phone: '+91 73394 70191',
@@ -199,7 +199,7 @@
         // Update page content
         function updatePageContent(city, config) {
             // Replace city mentions
-           // replaceCityInDOM('Thoothukudi', config.name);
+            // replaceCityInDOM('Thoothukudi', config.name);
             replaceCityInDOM(`Internship in ${config.name} | Thoothukudi`, config.name);
 
             // Update all city placeholders
@@ -1633,10 +1633,10 @@
             right: 22px;
             width: 56px;
             height: 56px;
-            border-radius: 20px;
+            border-radius: 100%;
             display: grid;
             place-items: center;
-            background: var(--surface-color);
+            background: blue;
             border: 1px solid rgba(49, 68, 149, 0.12);
             box-shadow: 0 26px 70px rgba(49, 68, 149, 0.12);
             z-index: 99;
@@ -1646,7 +1646,7 @@
         .whatsapp-float:hover,
         .top-button:hover {
             transform: translateY(-4px);
-            background: rgba(22, 171, 231, 0.08);
+            background: blue
         }
 
         .whatsapp-float {
@@ -1656,12 +1656,136 @@
         .top-button {
             bottom: 94px;
         }
-
-        .whatsapp-float img,
+        
         .top-button svg {
-            width: 26px;
-            height: 26px;
-            color: var(--secondary-color);
+            width: 23px;
+            height: 23px;
+            color: white;
+        }
+
+        .chatbot-float {
+            position: fixed;
+            right: 22px;
+            bottom: 166px;
+            width: 56px;
+            height: 56px;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            background: var(--surface-color);
+            border: 1px solid rgba(49, 68, 149, 0.12);
+            box-shadow: 0 26px 70px rgba(49, 68, 149, 0.12);
+            z-index: 100;
+            transition: transform 0.28s ease, background 0.28s ease;
+        }
+
+        .chatbot-float:hover {
+            transform: translateY(-4px);
+            background: rgba(22, 171, 231, 0.08);
+        }
+
+        .chatbot-widget {
+            position: fixed;
+            right: 22px;
+            bottom: 234px;
+            width: min(360px, calc(100% - 46px));
+            max-height: 520px;
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid rgba(49, 68, 149, 0.14);
+            box-shadow: 0 34px 90px rgba(49, 68, 149, 0.16);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .chatbot-widget.open {
+            display: flex;
+        }
+
+        .chatbot-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.95rem 1rem;
+            background: #0f172a;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .chatbot-header button {
+            border: none;
+            background: transparent;
+            color: #ffffff;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 0.9rem 0.85rem;
+            display: grid;
+            gap: 0.85rem;
+            overflow-y: auto;
+            background: #f8fbff;
+        }
+
+        .chatbot-message {
+            max-width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: 18px;
+            line-height: 1.5;
+            font-size: 0.94rem;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        .chatbot-message.user {
+            justify-self: end;
+            background: #e0f2fe;
+            color: #0f172a;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chatbot-message.bot {
+            justify-self: start;
+            background: #eef2ff;
+            color: #0f172a;
+            border-bottom-left-radius: 4px;
+        }
+
+        .chatbot-form {
+            display: flex;
+            gap: 0.65rem;
+            padding: 0.85rem;
+            border-top: 1px solid rgba(49, 68, 149, 0.08);
+            background: #ffffff;
+        }
+
+        .chatbot-form input {
+            flex: 1;
+            min-width: 0;
+            padding: 0.95rem 1rem;
+            border-radius: 14px;
+            border: 1px solid rgba(49, 68, 149, 0.14);
+            background: #f8fbff;
+            color: #0f172a;
+        }
+
+        .chatbot-form button {
+            padding: 0.95rem 1rem;
+            border-radius: 14px;
+            border: none;
+            background: #0f172a;
+            color: #ffffff;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.25s ease;
+        }
+
+        .chatbot-form button:hover {
+            background: #1e293b;
         }
 
         .faq-controls {
@@ -1949,7 +2073,8 @@
                 <div class="space-x-2 md:space-x-4 hidden md:flex items-center">
                     <a href="index.html"
                         class="text-[var(--primary-color)] hover:text-[var(--secondary-color)] transition-colors font-semibold flex items-center px-2 py-1 dark:text-[var(--sts-color)] dark:hover:text-[var(--primary-color)]">
-                        <i class="bi bi-house-door-fill text-[var(--secondary-color)] mr-1 dark:text-[var(--sts-color)]"></i>
+                        <i
+                            class="bi bi-house-door-fill text-[var(--secondary-color)] mr-1 dark:text-[var(--sts-color)]"></i>
                         Back to Home
                     </a>
 
@@ -2079,12 +2204,12 @@
                                 <div class="flex items-center justify-between gap-4">
                                     <div>
                                         <p class="text-sm uppercase tracking-[0.24em] text-tertiary">Training Focus</p>
-                                        <h3 class="mt-3 text-3xl font-semibold text-primary">Software Internship Roadmap
+                                        <h3 class="mt-3 text-3xl font-semibold text-primary" style="font-size: 25px;">Internship Roadmap
                                         </h3>
                                     </div>
                                     <span
-                                        class="inline-flex items-center rounded-full border border-[rgba(22,171,231,0.28)] bg-[rgba(22,171,231,0.12)] px-4 py-2 text-sm text-secondary">Batch
-                                        starts soon</span>
+                                    class="btn-primary inline-flex items-center justify-center rounded-full px-6 py-4 text-sm font-semibold shadow-glow transition hover:-translate-y-1">Batch
+                                        Starts Soon</span>
                                 </div>
                                 <div class="mt-8 grid gap-4 sm:grid-cols-2">
                                     <div
@@ -2811,7 +2936,7 @@
                                     <i class="bi bi-instagram"></i>
                                 </a>
                                 <a href="https://wa.me/917339470191" target="_blank"
-                                    class="text-2xl md:text-3xl hover:text-secondary transition-colors" 
+                                    class="text-2xl md:text-3xl hover:text-secondary transition-colors"
                                     aria-label="Chat on WhatsApp">
                                     <i class="bi bi-whatsapp"></i>
                                 </a>
@@ -2896,15 +3021,16 @@
                     <a href="mailto:samudhratechsolutions@gmail.com"
                         class="footer-link">samudhratechsolutions@gmail.com</a>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326" class="footer-social-link" target="_blank"
-                            aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/krishnakumar-rajagopal-99795326" class="footer-social-link"
+                            target="_blank" aria-label="LinkedIn">
                             <i class="bi bi-linkedin"></i>
                         </a>
                         <a href="https://www.instagram.com/samudhra_tuty" class="footer-social-link" target="_blank"
                             aria-label="Instagram">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="https://wa.me/917339470191" class="footer-social-link" target="_blank" aria-label="WhatsApp">
+                        <a href="https://wa.me/917339470191" class="footer-social-link" target="_blank"
+                            aria-label="WhatsApp">
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
@@ -2931,6 +3057,13 @@
                     <a href="#domains" class="footer-link">UI/UX Design</a>
                 </div>
             </div>
+
+            <a href="https://wa.me/917339470191" class="whatsapp-float animate-bounce" aria-label="Chat on WhatsApp" target="_blank"
+                rel="noreferrer">
+                <!--<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp icon" style="color: white;"-->
+                <i class="bi bi-whatsapp" style="color: white; font-size: 24px;"></i>
+            </a>
+
             <div class="footer-bottom">
                 <p><a href="https://www.samudhratechsolutions.biz" class="text-center" target="_blank"
                         rel="noopener noreferrer">© 2026 Samudhra Tech Solutions.</a> All rights reserved.</a></p>
@@ -2938,10 +3071,70 @@
         </footer>
     </div>
 
-    <a href="https://wa.me/917339470191" class="whatsapp-float" aria-label="Contact on WhatsApp" target="_blank"
-        rel="noreferrer">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp icon">
-    </a>
+    <!-- Chatbot Integration 
+    <link rel="stylesheet" href="chatbot.css">
+    <script defer src="chatbot.js"></script>
+
+    
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbot-toggle">
+            <i class="fas fa-robot"></i>
+        </button>
+
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <div style="display: flex; align-items: center;">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <div class="chatbot-title">STS AI Assistant</div>
+                        <div class="chatbot-status"><i class="bi bi-reception-4" style="color: rgb(125, 255, 125);"></i>
+                            Online</div>
+                    </div>
+                </div>
+                <div class="chatbot-controls">
+                    <button class="chatbot-minimize" id="chatbot-minimize" title="Minimize chat">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="chatbot-close" id="chatbot-close" title="Close chat">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-suggestions" id="chatbot-suggestions"></div>
+
+            <div class="chatbot-input-area" id="chatbot-input-area">
+                <div class="chatbot-input-container">
+                    <input type="text" class="chatbot-input" id="chatbot-input"
+                        placeholder="Ask me anything about STS...">
+                    <button class="chatbot-send" id="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chatbot-book-cta" id="chatbot-book-cta">
+                <button class="btn btn-primary" id="chatbook-whatsapp">Book on WhatsApp</button>
+            </div>
+
+            <div class="whatsapp-panel" id="whatsapp-panel">
+                <div class="notes-header">
+                    <h3>Booking Summary</h3>
+                    <button class="btn btn-secondary" id="whatsapp-close">×</button>
+                </div>
+                <div class="whatsapp-message" id="whatsapp-message"></div>
+                <div class="whatsapp-actions">
+                    <button class="btn btn-primary" id="book-whatsapp">Book on WhatsApp</button>
+                    <button class="btn btn-secondary" id="close-booking">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+
     <button class="top-button" aria-label="Scroll to top" id="scrollTopBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 15l6-6 6 6" />
@@ -3002,6 +3195,7 @@
         });
 
         scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 
         document.querySelectorAll('.faq-question').forEach((button) => {
             button.addEventListener('click', () => {
