@@ -6,12 +6,12 @@
 
   /* ---------- Data ---------- */
   const courses = [
-    { img:"assets/DevOps.jpeg", title:"DevOps Craft", duration:"12 weeks", level:"All levels", tools:["AWS","Docker","K8s","Terraform"], projects:6, featured:true },
-    { img:"assets/VibeCoding.jpeg", title:"AI Training", duration:"10 weeks", level:"All levels", tools:["ChatGPT","Claude","Cursor","Lovable"], projects:6 },
-    { img:"assets/DigitalMarketing.jpeg", title:"Digital Marketing", duration:"12 weeks", level:"All levels", tools:["SEO","Google Ads","SMM","AI Marketing"], projects:8 },
-    { img:"assets/CloudComputing.jpeg", title:"Cloud Computing", duration:"14 weeks", level:"Intermediate", tools:["AWS","Azure","GCP","Docker"], projects:5 },
-    { img:"assets/Java.jpeg", title:"Java Full Stack", duration:"16 weeks", level:"Intermediate", tools:["Java","Spring","React","MySQL"], projects:6 },
-    { img:"assets/DataAnalytics.jpeg", title:"Data Analytics", duration:"12 weeks", level:"All levels", tools:["Excel","SQL","Power BI","Python"], projects:8 }
+    { img:"images/DevOps.jpeg", title:"DevOps Craft", duration:"12 weeks", level:"All levels", tools:["AWS","Docker","K8s","Terraform"], projects:6, featured:true },
+    { img:"images/VibeCoding.jpeg", title:"AI Training", duration:"10 weeks", level:"All levels", tools:["ChatGPT","Claude","Cursor","Lovable"], projects:6 },
+    { img:"images/DigitalMarketing.jpeg", title:"Digital Marketing", duration:"12 weeks", level:"All levels", tools:["SEO","Google Ads","SMM","AI Marketing"], projects:8 },
+    { img:"images/CloudComputing.jpeg", title:"Cloud Computing", duration:"14 weeks", level:"Intermediate", tools:["AWS","Azure","GCP","Docker"], projects:5 },
+    { img:"images/Java.jpeg", title:"Java Full Stack", duration:"16 weeks", level:"Intermediate", tools:["Java","Spring","React","MySQL"], projects:6 },
+    { img:"images/DataAnalytics.jpeg", title:"Data Analytics", duration:"12 weeks", level:"All levels", tools:["Excel","SQL","Power BI","Python"], projects:8 }
   ];
 
   const why = [
