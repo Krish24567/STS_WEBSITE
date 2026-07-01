@@ -51,12 +51,7 @@
       "areaServed":"Thoothukudi",
       "sameAs":["https://www.facebook.com/","https://www.instagram.com/","https://www.linkedin.com/"]
     },
-    {
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"/it-academy-in-thoothukudi/"}
-      ]
-    },
+   
     {
       "@type":"FAQPage",
       "mainEntity":[
@@ -245,16 +240,6 @@
                             }
                         });
                     }
-
-                    const breadcrumb = data['@graph'].find(item => item['@type'] === 'BreadcrumbList');
-                    if (breadcrumb && Array.isArray(breadcrumb.itemListElement)) {
-                        breadcrumb.itemListElement.forEach(el => {
-                            if (typeof el.name === 'string') {
-                                el.name = el.name.replace(/Thoothukudi/gi, config.name);
-                            }
-                        });
-                    }
-
                     jsonLdEl.textContent = JSON.stringify(data, null, 2);
                 }
             } catch (error) {
