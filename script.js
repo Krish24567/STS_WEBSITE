@@ -1,7 +1,7 @@
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const fields = ['name', 'college', 'department', 'email', 'phone', 'domain', 'message'];
+    const fields = ['name', 'college', 'department', 'email', 'phone', 'domain', 'preferred_mode','message'];
     let valid = true;
 
     fields.forEach((field) => {
@@ -55,6 +55,7 @@ form.addEventListener('submit', async (event) => {
                         $email: String!,
                         $phone: bigint!,
                         $domain: String!,
+                        $preferred_mode: String!,
                         $message: String!
                     ) {
                         insert_internship_data_one(object: {
@@ -64,6 +65,7 @@ form.addEventListener('submit', async (event) => {
                             email: $email,
                             phone: $phone,
                             domain: $domain,
+                            preferred_mode: $preferred_mode,
                             message: $message,
                             status: "Pending"
                         }) {
@@ -78,6 +80,7 @@ form.addEventListener('submit', async (event) => {
                     email: document.getElementById("email").value,
                     phone: document.getElementById("phone").value,
                     domain: document.getElementById("domain").value,
+                    preferred_mode: document.getElementById("preferred_mode").value,
                     message: document.getElementById("message").value
                 }
             })
