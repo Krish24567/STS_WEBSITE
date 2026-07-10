@@ -440,3 +440,73 @@ p{margin:0 0 1em;color:var(--c-muted)}
   .masonry{columns:1}
   .copy{justify-content:center;text-align:center}
 }
+.btn-glow {
+  background: linear-gradient(135deg, #022570, #9f89ff);
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  animation: pulseGlow 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(37, 99, 235, 0.8);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(37,99,235,0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(56,189,248,0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(37,99,235,0.4);
+  }
+}
+
+.job-btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.job-badge {
+  position: absolute;
+  top: -18px;
+  right: -10px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  animation: badgeBounce 1.8s infinite;
+  z-index: 2;
+}
+
+.btn-glow {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 25px rgba(37,99,235,0.35);
+  transition: .3s ease;
+}
+
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(37,99,235,0.6);
+}
+
+@keyframes badgeBounce {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
